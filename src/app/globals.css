@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Renk Tanımları */
+  /* code.html'den gelen özel ana renkler */
   --color-primary: #ea580c;
   --color-primary-dark: #c2410c;
   --color-background-light: #fffaf5;
@@ -12,24 +12,63 @@
   --color-text-main: #431407;
   --color-text-muted: #78350f;
 
-  /* Font Tanımları */
-  --font-display: var(--font-display); 
-  
-  /* Border Radius - Tailwind v4 varsayılanlarını eziyoruz veya genişletiyoruz */
+  /* Tailwind v3 Standart Renkleri (Literal Parity için) */
+  --color-orange-50: #fff7ed;
+  --color-orange-100: #ffedd5;
+  --color-orange-200: #fed7aa;
+  --color-orange-900: #7c2d12;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #57534e;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+
+  /* Fontlar */
+  --font-display: var(--font-display), "Plus Jakarta Sans", sans-serif;
+
+  /* Radius Ayarları - code.html'den birebir */
+  --radius-DEFAULT: 0.5rem;
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
   --radius-2xl: 2rem;
+  --radius-full: 9999px;
 }
 
-/* Custom Utilities */
+/* Tailwind v4 Class-based Dark Mode Fix */
+@variant dark (&:where(.dark, .dark *));
+
+/* Özel Utility Sınıfları */
 @utility no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+/* Genel Ayarlar */
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background-light text-text-main font-display antialiased overflow-x-hidden selection:bg-primary/30;
+}
+
+/* Navbar için özel koruma - Opaklık ve Blur */
+.nav-glass {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .nav-glass {
+  background-color: rgba(28, 25, 23, 0.9);
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  vertical-align: middle;
 }

@@ -6,7 +6,8 @@ import "./globals.css";
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-display", // Tailwind config'deki font-display ile eşleşiyor
+  weight: ["400", "500", "600", "700", "800"], // Tüm ağırlıkları ekledik
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
@@ -21,8 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     // html etiketine "light" sınıfını ekledik.
-    // Material Symbols Outlined fontunu doğrudan buraya import edemiyoruz, CSS'ten çekeceğiz.
     <html lang="tr" className="light">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+      </head>
       <body
         className={`${plusJakartaSans.variable} font-display antialiased bg-background-light dark:bg-background-dark text-text-main overflow-x-hidden selection:bg-primary/30`} // Tailwind sınıfları eklendi
       >

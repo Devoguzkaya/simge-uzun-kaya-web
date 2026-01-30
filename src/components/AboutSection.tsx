@@ -9,7 +9,7 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 md:order-1">
               <div className="w-full aspect-[3/4] md:aspect-square bg-gray-200 rounded-2xl overflow-hidden shadow-lg relative z-10">
-                <img className="w-full h-full object-cover object-center" data-alt="Simge Uzun Kaya portresi" src="" /> {/* SRC BOŞ BIRAKILDI */}
+                <img className="w-full h-full object-cover object-center" data-alt="Simge Uzun Kaya portresi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQv29dIQQ5uZNiMGgeMiKXGNO2gB7jYm4skHPJiXcx-bcAo-5dBqw5IwtKtMMVxvyIZjucCtEslBAfXWKL7PfF_AAVH6yukj7Z3r72-D7OtnDb9OCl8HICic_9_PqruOiXkxfaKs8ZOsebJm1KCpF5_QCLLTIyG6vlPGkf3fkA9z1J6xwN24NsxVTfCwSrQBKgxHl8LgpPtySb3m3gq0UnWujbZ8udQB2uzht7Ng0cKsQWXAjAh--ysF4kLB1qz7nAN5GWyQ3ILiZ2" />
               </div>
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary rounded-2xl z-0"></div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent-coral/20 rounded-full blur-xl z-0"></div>
@@ -36,7 +36,7 @@ const AboutSection = () => {
                 </div>
               </div>
               <div className="mt-4">
-                <img className="h-12 opacity-60 dark:invert hue-rotate-15 sepia" data-alt="Simge Uzun Kaya imzası" src="" /> {/* SRC BOŞ BIRAKILDI */}
+                <img className="h-12 opacity-60 dark:invert hue-rotate-15 sepia" data-alt="Simge Uzun Kaya imzası" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW0JjgOI-E-Dr_34sOTHhxgG01x3FOCNp2BoFp8JBOufpTuDcUL5j4TiS5-ZkcFHpfVL4sTpzlltcd5JfS5HyAi_89ydRJk3gNVsIS77ug2KAzRWd7R7W0j3kIB7OAXYBdxHuJrDvLAP3q5omNGzWJwR8bPnkECb1ClrQLlAXUg6oEM2rF9QZ-YiohVdTJy4dw5Ct8scvgVtroWDjxs1CLOIyEKhsIuAq8xAje4bE4AjtS9VEzN860Ohrfg5rKkvu4DTpRJe4aSDQA" />
               </div>
             </div>
           </div>
