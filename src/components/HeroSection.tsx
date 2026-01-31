@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const HeroSection = () => {
   return (
@@ -19,7 +20,7 @@ const HeroSection = () => {
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-accent-yellow opacity-80" preserveAspectRatio="none" viewBox="0 0 100 10">
                   <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" strokeWidth="8"></path>
                 </svg>
-              </span> 
+              </span>
               Büyütüyoruz
             </h1>
             <p className="text-lg text-text-muted/80 dark:text-stone-300 max-w-lg mx-auto lg:mx-0 leading-relaxed">
@@ -44,7 +45,14 @@ const HeroSection = () => {
           </div>
           <div className="lg:col-span-6 relative">
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-orange-900/10 transform rotate-2 hover:rotate-0 transition-all duration-500 border-4 border-white dark:border-stone-700">
-              <img alt="Child playing with colorful wooden blocks in a bright room" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdl-WpOn3SORZxs6B-Sp-B-IFEuxx5ImWod6YvWFXiSz_-RNZe5CopZ76oysLTbPrHeY-6M4wo0t2pJ95bzd1kWI4NzRuErHVBtM3eOMwz4v38DqRtSF_0U0FcfjUn7pv3P0UMjXVcVI3gklxkKS1Med37Mv_mRI4QzfpEPi-18cIlCDwzc8ZxrlW324gQkcBiRpcwTjuFuaKZFgpR9IcmybgAFVAo3vif97JXCY_F8T1oM9szZlTosrxwn0CNEYwadBacEbThyJgG" />
+              <Image
+                alt="Renkli ahşap bloklarla oynayan çocuk"
+                className="object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdl-WpOn3SORZxs6B-Sp-B-IFEuxx5ImWod6YvWFXiSz_-RNZe5CopZ76oysLTbPrHeY-6M4wo0t2pJ95bzd1kWI4NzRuErHVBtM3eOMwz4v38DqRtSF_0U0FcfjUn7pv3P0UMjXVcVI3gklxkKS1Med37Mv_mRI4QzfpEPi-18cIlCDwzc8ZxrlW324gQkcBiRpcwTjuFuaKZFgpR9IcmybgAFVAo3vif97JXCY_F8T1oM9szZlTosrxwn0CNEYwadBacEbThyJgG"
+                fill
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay"></div>
             </div>
             <div className="absolute -bottom-6 -left-6 bg-white dark:bg-stone-800 p-4 rounded-xl shadow-xl flex items-center gap-3 animate-bounce border border-orange-50" style={{ animationDuration: "3s" }}>

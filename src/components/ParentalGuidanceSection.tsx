@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const ParentalGuidanceSection = () => {
   return (
@@ -46,8 +47,14 @@ const ParentalGuidanceSection = () => {
             </button>
           </div>
           <div className="order-1 lg:order-2 relative">
-            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white dark:border-stone-700 rotate-2 hover:rotate-0 transition-transform duration-500 group">
-              <img alt="Ebeveyn ve çocuk parkta el ele yürüyor" className="w-full h-full object-cover aspect-[4/3] transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK8Hf5ZIoBBNObsfSqTLwp2e7we7iojw3xmHcyK9NS9nPZ-Nq2OJvV36rgjaGgP063IMwMPf_zRr8tpJ-gmHNlJwD8qokgtKJ5IumU6_CcENPDx7r6BpO_OpnNxdqt0GAPpyr0ykbwgZP2A6GmIoeG0OF7bxZjLKRpVjbeC6QxWnXFus6XQvQINA0jLqGTPOwXGHU62xdqf-uZrvzcM6vvAytqEU029q1UgB4MAYZia-wjqSd5NaAADasRQdIehsjCbR_rQGCJX55h" />
+            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white dark:border-stone-700 rotate-2 hover:rotate-0 transition-transform duration-500 group aspect-[4/3]">
+              <Image
+                alt="Ebeveyn ve çocuk parkta el ele yürüyor"
+                className="object-cover transform group-hover:scale-105 transition-transform duration-700"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK8Hf5ZIoBBNObsfSqTLwp2e7we7iojw3xmHcyK9NS9nPZ-Nq2OJvV36rgjaGgP063IMwMPf_zRr8tpJ-gmHNlJwD8qokgtKJ5IumU6_CcENPDx7r6BpO_OpnNxdqt0GAPpyr0ykbwgZP2A6GmIoeG0OF7bxZjLKRpVjbeC6QxWnXFus6XQvQINA0jLqGTPOwXGHU62xdqf-uZrvzcM6vvAytqEU029q1UgB4MAYZia-wjqSd5NaAADasRQdIehsjCbR_rQGCJX55h"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-80"></div>
               <div className="absolute bottom-8 left-8 right-8 text-white">
                 <p className="font-bold text-2xl mb-2 font-display">"Çocuğunuzun en iyi terapisti sizsiniz."</p>

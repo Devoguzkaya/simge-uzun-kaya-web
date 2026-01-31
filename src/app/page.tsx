@@ -4,7 +4,8 @@ import ParentalGuidanceSection from '../components/ParentalGuidanceSection';
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
 import CredentialsSection from '../components/CredentialsSection';
-import ContactFooterSection from '../components/ContactFooterSection'; // Yeni komponent
+import ContactFooterSection from '../components/ContactFooterSection';
+import ScrollReveal from '../components/ScrollReveal';
 
 export default function Home() {
   return (
@@ -12,11 +13,21 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <ParentalGuidanceSection />
-        <AboutSection />
-        <ServicesSection />
-        <CredentialsSection />
-        <ContactFooterSection /> {/* Yeni komponent */}
+        <ScrollReveal>
+          <ParentalGuidanceSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <AboutSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ServicesSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <CredentialsSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ContactFooterSection />
+        </ScrollReveal>
       </main>
     </div>
   );
