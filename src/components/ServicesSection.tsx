@@ -27,7 +27,7 @@ const ServicesSection = () => {
             <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
               <Image
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
-                src="/1.png"
+                src="/images/services/1.png"
                 alt="Çocuk, Ergen ve Yetişkin Danışmanlığı"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -47,7 +47,7 @@ const ServicesSection = () => {
             <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
               <Image
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
-                src="/oyunterapisi.png"
+                src="/images/services/oyunterapisi.png"
                 alt="Deneyimsel Oyun Terapisi Seansı"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -60,6 +60,7 @@ const ServicesSection = () => {
             <div className="w-14 h-14 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 text-orange-600 group-hover:bg-accent-blue group-hover:text-white transition-all duration-300">
               <span className="material-symbols-outlined text-3xl">timer</span>
             </div>
+            <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">Moxo Dikkat Testi</h3>
             <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">Moxo Dikkat Testi</h3>
             <p className="text-stone-600 dark:text-stone-400 text-sm mb-8 leading-relaxed">
               Dikkat, dürtüsellik ve hiperaktivite performansını ölçen bilgisayar destekli klinik test.
@@ -87,7 +88,7 @@ const ServicesSection = () => {
             <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
               <Image
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
-                src="/attention2.png"
+                src="/images/services/attention2.png"
                 alt="Attentioner Dikkat Programı Eğitimi"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
