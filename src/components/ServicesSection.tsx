@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+import Image from 'next/image';
 
 const ServicesSection = () => {
   return (
@@ -26,7 +25,13 @@ const ServicesSection = () => {
               6 aydan itibaren her gelişim evresine özel duygusal destek ve danışmanlık.
             </p>
             <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/1.png" />
+              <Image
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                src="/1.png"
+                alt="Çocuk, Ergen ve Yetişkin Danışmanlığı"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           </div>
 
@@ -40,7 +45,13 @@ const ServicesSection = () => {
               Çocukların dünyayı anlamlandırma yolu olan oyunu kullanarak çözüm odaklı terapi süreci.
             </p>
             <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/oyunterapisi.png" />
+              <Image
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                src="/oyunterapisi.png"
+                alt="Deneyimsel Oyun Terapisi Seansı"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           </div>
 
@@ -54,7 +65,13 @@ const ServicesSection = () => {
               Dikkat, dürtüsellik ve hiperaktivite performansını ölçen bilgisayar destekli klinik test.
             </p>
             <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/images/services/moxo.png" />
+              <Image
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                src="/images/services/moxo.png"
+                alt="Moxo Dikkat Testi Uygulaması"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           </div>
 
@@ -68,7 +85,13 @@ const ServicesSection = () => {
               7-18 yaş arası dikkat ve odaklanma becerilerini geliştiren nöropsikolojik tabanlı eğitim.
             </p>
             <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/attention2.png" />
+              <Image
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                src="/attention2.png"
+                alt="Attentioner Dikkat Programı Eğitimi"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           </div>
 
@@ -82,7 +105,13 @@ const ServicesSection = () => {
               Sınav kaygısı ve motivasyon yönetimiyle öğrencilerin başarılarını zirveye taşıma.
             </p>
             <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/images/services/exam.png" />
+              <Image
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                src="/images/services/exam.png"
+                alt="Öğrenciler için Sınav Danışmanlığı ve Rehberlik"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           </div>
 
@@ -96,7 +125,13 @@ const ServicesSection = () => {
               Mesafe fark etmeksizin, güvenli dijital platformlar üzerinden ev konforunda destek.
             </p>
             <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/images/services/online.png" />
+              <Image
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                src="/images/services/online.png"
+                alt="Güvenli Platformlar üzerinden Online Danışmanlık"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           </div>
         </div>
