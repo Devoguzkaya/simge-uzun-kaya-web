@@ -20,6 +20,7 @@ const Navbar = () => {
                   alt="Simge Uzun Kaya Logo"
                   width={56}
                   height={56}
+                  priority={true}
                   className="h-full w-auto object-contain transition-transform group-hover:scale-105"
                 />
               </div>

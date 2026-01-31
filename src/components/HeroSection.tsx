@@ -36,9 +36,15 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center justify-center lg:justify-start gap-4 pt-6 opacity-90">
               <div className="flex -space-x-3">
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 bg-cover bg-center" data-alt="Smiley child portrait 1" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAklwsou_us2BO3Xbrq2zAxKmJ2ZW8-3Ouu2sVQdeRWgl3Erv7OpOsiEWbUGk61rCPlnMFPfWjGsoAekqofukyCpI75IEhUtkmhqdgdRJuMF0LAVDRFa1Nad5HaTbs46XlS5qA2buETteUX3tSZCxt18HJZMsm9vp2ifWwIU4ElUDiQDw9w9CXOuqDNYwFKh6x60v43rX1hbOOeNMITdw-Xa1nO2UP_NrHkOBjsEa7JCfQHK5TIAHvmrt0YXJyB54c6gXw31yEVELmg')" }}></div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 bg-cover bg-center" data-alt="Smiley child portrait 2" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCL0i84lKYNVsElCQPaZyqadAbqsh2b7Qe8gsb8ofas3BsUG66wOvqLqQvHFjvB9TxuoOsGcKkK7TSE5TQNgfwM1CG0zJcQS1asAyCPje52WjIUfTFHndUzUH5uMYjn5y0HnXL0co2xNlxDr02toMBHGAuZt-qhDjpokPo8_vgkLa1zOcICPDlECebelslGLk_2zTbs3Z8DrEuroDpt4RpYs0jgOJf-rLMA6OZbtOBXipwPUwDxxpXOHDtVpxq9a0FXYY_TmmMPewR9')" }}></div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 bg-cover bg-center" data-alt="Smiley child portrait 3" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWnHdCe3P6bI1-pcch-_gZ4BDgSc2JHr8BsygGxG2ouiFrCoU28LubCYOVumTldA0acpiG29QQhWj0FEm8zuY80SjM9wzdhMU2QYhEDVtwVKa6RMSvzFimcmWNvM66c78tl7urJEID-n1HqBqr0EsVKCTGfuhnFAX36H1W-cfh0Q9MQTxo3R66GL8NdTQvqIbSlS_9kanBMu-KGvDSE_3koCCXZAMKsG0rj9qG6mRuKOG1k0U0_rlTuisKZhN15ZooQDTVzA5ys8wW')" }}></div>
+                <div className="size-10 rounded-full border-2 border-white relative overflow-hidden bg-gray-200">
+                  <Image fill className="object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAklwsou_us2BO3Xbrq2zAxKmJ2ZW8-3Ouu2sVQdeRWgl3Erv7OpOsiEWbUGk61rCPlnMFPfWjGsoAekqofukyCpI75IEhUtkmhqdgdRJuMF0LAVDRFa1Nad5HaTbs46XlS5qA2buETteUX3tSZCxt18HJZMsm9vp2ifWwIU4ElUDiQDw9w9CXOuqDNYwFKh6x60v43rX1hbOOeNMITdw-Xa1nO2UP_NrHkOBjsEa7JCfQHK5TIAHvmrt0YXJyB54c6gXw31yEVELmg" alt="Mutlu çocuk 1" sizes="40px" />
+                </div>
+                <div className="size-10 rounded-full border-2 border-white relative overflow-hidden bg-gray-200">
+                  <Image fill className="object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL0i84lKYNVsElCQPaZyqadAbqsh2b7Qe8gsb8ofas3BsUG66wOvqLqQvHFjvB9TxuoOsGcKkK7TSE5TQNgfwM1CG0zJcQS1asAyCPje52WjIUfTFHndUzUH5uMYjn5y0HnXL0co2xNlxDr02toMBHGAuZt-qhDjpokPo8_vgkLa1zOcICPDlECebelslGLk_2zTbs3Z8DrEuroDpt4RpYs0jgOJf-rLMA6OZbtOBXipwPUwDxxpXOHDtVpxq9a0FXYY_TmmMPewR9" alt="Mutlu çocuk 2" sizes="40px" />
+                </div>
+                <div className="size-10 rounded-full border-2 border-white relative overflow-hidden bg-gray-200">
+                  <Image fill className="object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWnHdCe3P6bI1-pcch-_gZ4BDgSc2JHr8BsygGxG2ouiFrCoU28LubCYOVumTldA0acpiG29QQhWj0FEm8zuY80SjM9wzdhMU2QYhEDVtwVKa6RMSvzFimcmWNvM66c78tl7urJEID-n1HqBqr0EsVKCTGfuhnFAX36H1W-cfh0Q9MQTxo3R66GL8NdTQvqIbSlS_9kanBMu-KGvDSE_3koCCXZAMKsG0rj9qG6mRuKOG1k0U0_rlTuisKZhN15ZooQDTVzA5ys8wW" alt="Mutlu çocuk 3" sizes="40px" />
+                </div>
               </div>
               <p className="text-sm font-semibold text-text-main dark:text-white">500+ Aile Tarafından Güveniliyor</p>
             </div>
