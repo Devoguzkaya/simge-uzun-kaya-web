@@ -26,7 +26,7 @@ const AboutSection = () => {
                 <span className="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">Hakkımda</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-text-main dark:text-white mb-4">Merhaba, ben Simge Uzun Kaya.</h2>
                 <p className="text-text-muted/80 dark:text-stone-300 text-lg leading-relaxed mb-4">
-                  10 yılı aşkın süredir çocukların karmaşık duygusal dünyalarında yol almalarına yardımcı olan, kendini işine adamış bir psikolojik danışmanım. Yaklaşımım, çocukların kendilerini güvende hissetmelerini sağlayan sıcak, empatik bir bağ ile klinik uzmanlığı dengeler.
+                  Sinop&apos;ta 10 yılı aşkın süredir çocukların karmaşık duygusal dünyalarında yol almalarına yardımcı olan, kendini işine adamış bir psikolojik danışmanım. Yaklaşımım, çocukların kendilerini güvende hissetmelerini sağlayan sıcak, empatik bir bağ ile klinik uzmanlığı dengeler.
                 </p>
                 <p className="text-text-muted/80 dark:text-stone-300 text-lg leading-relaxed">
                   Her çocuğun oyun, sanat veya sohbet yoluyla kendine özgü bir ifade dili olduğuna inanıyorum. Amacım, bu dili çözmek ve hem çocuğu hem de ailesini güçlendirmektir.

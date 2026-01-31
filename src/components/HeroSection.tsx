@@ -14,7 +14,7 @@ const HeroSection = () => {
               Yeni Danışan Kabul Ediliyor
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-main dark:text-white leading-[1.15] tracking-tight">
-              Minik Zihinleri <br className="hidden lg:block" />
+              Sinop&apos;ta Minik Zihinleri <br className="hidden lg:block" />
               <span className="relative inline-block text-primary">
                 Sevgiyle
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-accent-yellow opacity-80" preserveAspectRatio="none" viewBox="0 0 100 10">
@@ -24,7 +24,7 @@ const HeroSection = () => {
               Büyütüyoruz
             </h1>
             <p className="text-lg text-text-muted/80 dark:text-stone-300 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Çocuğunuzun benzersiz yolculuğu için profesyonel psikolojik destek. Büyüme, anlama ve iyileşme için güvenli, sıcak bir alan sunuyoruz.
+              Sinop merkezli kliniğimizde çocuğunuzun benzersiz yolculuğu için profesyonel psikolojik destek. Büyüme, anlama ve iyileşme için güvenli, sıcak bir alan sunuyoruz.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <button className="inline-flex items-center justify-center h-12 px-8 rounded-xl bg-gradient-to-r from-primary to-primary-dark text-white font-bold hover:shadow-lg hover:shadow-primary/30 transition-all shadow-md shadow-primary/20">
