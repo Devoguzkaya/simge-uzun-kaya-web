@@ -4,7 +4,10 @@ import ParentalGuidanceSection from '../components/ParentalGuidanceSection';
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
 import CredentialsSection from '../components/CredentialsSection';
-import ContactFooterSection from '../components/ContactFooterSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import FAQSection from '../components/FAQSection';
+import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 import ScrollReveal from '../components/ScrollReveal';
 
 export default function Home() {
@@ -23,12 +26,17 @@ export default function Home() {
           <ServicesSection />
         </ScrollReveal>
         <ScrollReveal>
-          <CredentialsSection />
+          <TestimonialsSection />
         </ScrollReveal>
         <ScrollReveal>
-          <ContactFooterSection />
+          <FAQSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <CredentialsSection />
         </ScrollReveal>
       </main>
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

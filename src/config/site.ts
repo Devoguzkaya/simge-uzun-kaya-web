@@ -9,12 +9,14 @@ export const siteConfig = {
   },
   links: {
     instagram: "https://www.instagram.com/sinop.psikolojikdanismanlik/",
+    whatsapp: "https://wa.me/905522610057",
     esperaRandevu: "https://www.esperayasam.com/randevu",
   },
   nav: [
     { label: "Ana Sayfa", href: "/" },
     { label: "Hakkımda", href: "#about" },
     { label: "Hizmetler", href: "#services" },
-    { label: "Uzmanlıklar", href: "#credentials" },
+    { label: "Referanslar", href: "#testimonials" },
+    { label: "Sıkça Sorulanlar", href: "#faq" },
   ]
 };

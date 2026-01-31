@@ -45,10 +45,10 @@ const jsonLd = {
   "image": "https://simgeuzunkaya.com/logo.png", // Domain olunca güncellenecek
   "@id": "https://simgeuzunkaya.com",
   "url": "https://simgeuzunkaya.com",
-  "telephone": "+905054363957",
+  "telephone": "+905522610057",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Meydan Kapı Mah. 222. Sk. No:2 Kat:2", // Adres bilgisine göre güncellenebilir
+    "streetAddress": "Gazi Cad. (Eski Kervansaray Karşısı)",
     "addressLocality": "Sinop",
     "addressRegion": "Merkez",
     "postalCode": "57000",
@@ -56,8 +56,8 @@ const jsonLd = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 42.0267, // Sinop Yaklaşık Koordinat
-    "longitude": 35.1511
+    "latitude": 42.00639,
+    "longitude": 35.11305
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -73,7 +73,7 @@ const jsonLd = {
     "closes": "18:00"
   },
   "sameAs": [
-    "https://www.instagram.com/pdrsimgeuzunkaya/"
+    "https://www.instagram.com/sinop.psikolojikdanismanlik/"
   ]
 };
 
