@@ -46,7 +46,10 @@ const HeroSection = () => {
                   <Image fill className="object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWnHdCe3P6bI1-pcch-_gZ4BDgSc2JHr8BsygGxG2ouiFrCoU28LubCYOVumTldA0acpiG29QQhWj0FEm8zuY80SjM9wzdhMU2QYhEDVtwVKa6RMSvzFimcmWNvM66c78tl7urJEID-n1HqBqr0EsVKCTGfuhnFAX36H1W-cfh0Q9MQTxo3R66GL8NdTQvqIbSlS_9kanBMu-KGvDSE_3koCCXZAMKsG0rj9qG6mRuKOG1k0U0_rlTuisKZhN15ZooQDTVzA5ys8wW" alt="Mutlu çocuk 3" sizes="40px" />
                 </div>
               </div>
-              <p className="text-sm font-semibold text-text-main dark:text-white">500+ Aile Tarafından Güveniliyor</p>
+              <p className="text-sm font-semibold text-text-main dark:text-white leading-tight">
+                Ailelerin Güvenle Tercih Ettiği Psikolojik Danışmanlık<br />
+                <small className="text-[10px] text-text-muted/60 font-normal">Danışan geri bildirimlerine dayalıdır.</small>
+              </p>
             </div>
           </div>
           <div className="lg:col-span-6 relative">
