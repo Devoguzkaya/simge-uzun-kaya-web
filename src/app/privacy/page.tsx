@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
                         <p>Aşağıdaki durumlarda kişisel verileriniz işlenebilir:</p>
                         <ul className="list-disc pl-6 space-y-2">
                             <li>İletişim formunu doldurduğunuzda; adınız, soyadınız, telefon numaranız ve e-posta adresiniz.</li>
-                            <li>Randevu taleplerinde; çocuk ve aile ile ilgili temel ön bilgiler.</li>
+                            <li>Randevu ve seans taleplerinde; çocuk, ergen veya yetişkin birey ile ilgili temel ön bilgiler.</li>
                             <li>Web sitemizi ziyaret ettiğinizde; çerezler (cookies) aracılığıyla anonim kullanım verileri.</li>
                         </ul>
                     </section>

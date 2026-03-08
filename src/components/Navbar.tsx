@@ -2,51 +2,60 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { siteConfig } from '@/config/site';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 z-50 w-full nav-glass border-b border-orange-50 dark:border-white/10 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="size-14 relative overflow-hidden flex items-center justify-center">
-                <Image
-                  src="/logo_arkaplansiz.png"
-                  alt="Simge Uzun Kaya Logo"
-                  width={56}
-                  height={56}
-                  priority={true}
-                  className="h-full w-auto object-contain transition-transform group-hover:scale-105"
-                />
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-text-main dark:text-white text-lg font-bold leading-tight tracking-tight">Simge Uzun Kaya</h1>
-                <p className="text-xs text-text-muted/80 font-medium">Psikolojik Danışman</p>
-              </div>
-            </Link>
-          </div>
+    <nav className={`fixed top-0 z-50 w-full transition-all duration-500 ${scrolled ? 'py-4' : 'py-8'}`}>
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div className={`relative flex items-center justify-between px-6 py-4 rounded-full transition-all duration-500 ${scrolled ? 'bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-xl shadow-lg border border-[#E8F3E9]/50' : 'bg-transparent'}`}>
+          
+          <Link href="/" className="flex items-center gap-4 group">
+            <div className="relative size-12 overflow-hidden flex items-center justify-center rounded-full bg-[#E8F3E9] dark:bg-[#2D3A2E]">
+              <Image
+                src="/logo_arkaplansiz.png"
+                alt="Simge Uzun Kaya Logo"
+                width={40}
+                height={40}
+                priority={true}
+                className="object-contain transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-serif text-xl tracking-tight text-[#2C3E2D] dark:text-[#E8F3E9]">Simge Uzun Kaya</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-[#8B7355] font-bold">Psikolojik Danışman</span>
+            </div>
+          </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {siteConfig.nav.map((item) => (
               <Link
                 key={item.href}
-                className="text-sm font-semibold text-text-main hover:text-primary dark:text-white dark:hover:text-primary transition-colors"
+                className="relative text-sm font-bold text-[#2C3E2D] dark:text-[#E8F3E9] group overflow-hidden"
                 href={item.href}
               >
-                {item.label}
+                <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">{item.label}</span>
+                <span className="absolute top-0 left-0 inline-block translate-y-full transition-transform duration-300 group-hover:translate-y-0 text-[#4A6741]">
+                  {item.label}
+                </span>
               </Link>
             ))}
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <Link
-              className="hidden sm:flex items-center justify-center rounded-xl bg-primary hover:bg-primary-dark text-white text-sm font-bold px-6 py-2.5 transition-all transform hover:scale-105 shadow-lg shadow-primary/20"
+              className="hidden sm:inline-flex px-8 py-3 rounded-full bg-[#2C3E2D] dark:bg-[#E8F3E9] text-[#FDFBF7] dark:text-[#1A1A1A] text-sm font-bold transition-all hover:scale-[1.05] hover:shadow-xl active:scale-95"
               href={siteConfig.links.esperaRandevu}
               target="_blank"
             >
@@ -54,7 +63,7 @@ const Navbar = () => {
             </Link>
 
             <button
-              className="md:hidden p-2 text-text-main dark:text-white hover:bg-orange-50 dark:hover:bg-white/10 rounded-lg transition-colors"
+              className="md:hidden size-10 flex items-center justify-center rounded-full bg-[#E8F3E9] dark:bg-[#2D3A2E] text-[#2C3E2D] dark:text-[#E8F3E9]"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -64,34 +73,34 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay with Exit Animation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden absolute top-20 left-0 w-full bg-white/95 dark:bg-stone-900/95 backdrop-blur-xl border-b border-orange-100 dark:border-white/10 shadow-xl overflow-hidden flex flex-col p-4 gap-4"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden absolute top-full left-0 w-full p-6"
           >
-            {siteConfig.nav.map((item) => (
+            <div className="bg-white/95 dark:bg-[#1A1A1A]/95 backdrop-blur-2xl rounded-[2rem] p-8 shadow-2xl border border-[#E8F3E9] flex flex-col gap-6">
+              {siteConfig.nav.map((item) => (
+                <Link
+                  key={item.href}
+                  className="text-2xl font-serif text-[#2C3E2D] dark:text-[#E8F3E9] hover:text-[#4A6741] transition-colors"
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
               <Link
-                key={item.href}
-                className="p-3 text-center text-base font-semibold text-text-main hover:bg-orange-50 dark:text-white dark:hover:bg-white/5 rounded-xl transition-colors"
-                href={item.href}
+                className="mt-4 flex items-center justify-center rounded-full bg-[#2C3E2D] text-[#FDFBF7] py-5 text-lg font-bold"
+                href={siteConfig.links.esperaRandevu}
+                target="_blank"
                 onClick={() => setIsOpen(false)}
               >
-                {item.label}
+                Randevu Al
               </Link>
-            ))}
-            <Link
-              className="flex items-center justify-center rounded-xl bg-primary hover:bg-primary-dark text-white text-base font-bold px-6 py-3 transition-all shadow-lg shadow-primary/20"
-              href={siteConfig.links.esperaRandevu}
-              target="_blank"
-              onClick={() => setIsOpen(false)}
-            >
-              Randevu Al
-            </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

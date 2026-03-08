@@ -5,109 +5,114 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { siteConfig } from '@/config/site';
 import { InstagramIcon } from './icons/InstagramIcon';
-import { motion } from 'framer-motion';
 
 const Footer = () => {
     const mapUrl = "https://maps.google.com/maps?q=ESPERA+BÜTÜNCÜL+YAŞAM+MERKEZİ+Sinop&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
     return (
-        <footer className="bg-stone-50 dark:bg-stone-950 pt-24 pb-12 relative overflow-hidden" id="contact">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <footer className="bg-[#2C3E2D] dark:bg-[#1A1A1A] pt-32 pb-12 relative overflow-hidden" id="contact">
+            {/* Background Blob */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#4A6741] rounded-full blur-[150px] opacity-20 pointer-events-none" />
 
-                {/* 1. CTA Section: Tanışmaya Hazır mısınız? */}
-                <div className="bg-white dark:bg-stone-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-orange-900/5 mb-20 flex flex-col lg:flex-row items-center justify-between gap-10 border border-orange-100 dark:border-white/5 relative overflow-hidden">
-                    <div className="absolute right-0 top-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
+            <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
 
-                    <div className="max-w-xl text-center lg:text-left">
-                        <h2 className="text-3xl md:text-4xl font-black text-text-main dark:text-white mb-4 italic">Tanışmaya hazır mısınız?</h2>
-                        <p className="text-lg text-text-muted/80 dark:text-stone-400 mb-0">Sizi dinlemek için buradayız. Aileniz için doğru kişi olup olmadığımızı görmek adına ücretsiz 15 dakikalık bir ön görüşme planlayın.</p>
+                {/* 1. Massive CTA Section */}
+                <div className="flex flex-col lg:flex-row items-end justify-between border-b border-[#E8F3E9]/20 pb-20 mb-20 gap-12">
+                    <div className="max-w-3xl">
+                        <span className="text-[#D9C5A3] text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
+                            İletişim
+                        </span>
+                        <h2 className="text-6xl lg:text-8xl font-serif text-[#FDFBF7] leading-[0.9]">
+                            Tanışmaya <br />
+                            <span className="italic font-light text-[#D9C5A3]">hazır mısınız?</span>
+                        </h2>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+                    <div className="flex flex-col gap-4">
                         <a
                             href={siteConfig.links.esperaRandevu}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center px-10 py-5 rounded-2xl bg-primary text-white text-lg font-bold hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 whitespace-nowrap"
+                            className="group relative overflow-hidden bg-[#D9C5A3] text-[#2C3E2D] px-10 py-5 rounded-full text-lg font-bold transition-transform hover:scale-[1.02] text-center"
                         >
-                            Randevu Oluştur
+                            <span className="relative z-10">Randevu Oluştur</span>
+                            <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                         </a>
                         <a
                             href={`tel:${siteConfig.contact.phone1_clean}`}
-                            className="flex items-center justify-center px-10 py-5 rounded-2xl bg-white dark:bg-stone-800 text-text-main dark:text-white text-lg font-bold border border-orange-100 dark:border-white/10 hover:bg-orange-50 dark:hover:bg-stone-700 transition-all shadow-sm whitespace-nowrap"
+                            className="px-10 py-5 rounded-full text-lg font-bold border border-[#E8F3E9]/30 text-[#FDFBF7] hover:bg-[#E8F3E9]/10 transition-colors text-center"
                         >
-                            Hemen Arayın
+                            Bizi Arayın
                         </a>
                     </div>
                 </div>
 
-                {/* 2. Main Footer Content: Grid Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-20">
+                {/* 2. Grid Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
 
-                    {/* Brand & Bio */}
-                    <div className="lg:col-span-4 space-y-6">
+                    {/* Brand */}
+                    <div className="md:col-span-4 flex flex-col gap-6">
                         <div className="flex items-center gap-4">
-                            <Image src="/logo_arkaplansiz.png" alt="Logo" width={48} height={48} className="h-12 w-auto" />
-                            <div>
-                                <h3 className="text-xl font-black text-text-main dark:text-white leading-none">Simge Uzun Kaya</h3>
-                                <p className="text-sm text-primary font-bold mt-1 uppercase tracking-widest">Psikolojik Danışman</p>
+                            <div className="relative size-12 bg-[#FDFBF7] rounded-full flex items-center justify-center p-2">
+                                <Image src="/logo_arkaplansiz.png" alt="Logo" width={40} height={40} className="object-contain" />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="font-serif text-xl tracking-tight text-[#FDFBF7]">Simge Uzun Kaya</span>
+                                <span className="text-[10px] uppercase tracking-[0.2em] text-[#D9C5A3] font-bold">Psikolojik Danışman</span>
                             </div>
                         </div>
-                        <p className="text-text-muted/80 dark:text-stone-400 leading-relaxed text-sm">
+                        <p className="text-[#E8F3E9]/60 text-sm font-light leading-relaxed">
                             Sinop merkezli kliniğimizde, çocukların ve ailelerin duygusal dünyalarına ışık tutuyor, oyunun iyileştirici gücüyle geleceği ilmek ilmek örüyoruz.
                         </p>
-                        <div className="flex gap-4">
-                            <a href={siteConfig.links.instagram} target="_blank" className="size-10 rounded-full border border-orange-200 dark:border-white/10 flex items-center justify-center text-stone-600 dark:text-stone-400 hover:bg-primary hover:text-white hover:border-primary transition-all">
-                                <InstagramIcon className="size-5" />
-                            </a>
-                        </div>
+                        <a href={siteConfig.links.instagram} target="_blank" className="w-10 h-10 rounded-full border border-[#E8F3E9]/20 flex items-center justify-center text-[#FDFBF7] hover:bg-[#D9C5A3] hover:text-[#2C3E2D] hover:border-[#D9C5A3] transition-all">
+                            <InstagramIcon className="w-4 h-4" />
+                        </a>
                     </div>
 
-                    {/* Contact & Map Previews */}
-                    <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-12 gap-12">
-                        <div className="sm:col-span-4 space-y-6">
-                            <h4 className="text-text-main dark:text-white font-bold uppercase tracking-widest text-xs">İletişim</h4>
-                            <ul className="space-y-4">
-                                <li className="flex items-start gap-3">
-                                    <span className="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
-                                    <p className="text-sm text-text-muted/70 dark:text-stone-400">Gazi Cad. (Eski Kervansaray Karşısı), Merkez / SİNOP</p>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <span className="material-symbols-outlined text-primary text-sm">call</span>
-                                    <a href={`tel:${siteConfig.contact.phone1_clean}`} className="text-sm text-text-muted/70 dark:text-stone-400 hover:text-primary">{siteConfig.contact.phone1}</a>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <span className="material-symbols-outlined text-primary text-sm">mail</span>
-                                    <a href={`mailto:${siteConfig.contact.email}`} className="text-sm text-text-muted/70 dark:text-stone-400 hover:text-primary">{siteConfig.contact.email}</a>
-                                </li>
-                            </ul>
-                        </div>
+                    {/* Contact Info */}
+                    <div className="md:col-span-3 flex flex-col gap-6">
+                        <h4 className="text-[#D9C5A3] font-bold uppercase tracking-widest text-[10px]">İletişim Bilgileri</h4>
+                        <ul className="flex flex-col gap-4">
+                            <li>
+                                <a href={`tel:${siteConfig.contact.phone1_clean}`} className="text-[#FDFBF7] hover:text-[#D9C5A3] transition-colors text-lg font-light">
+                                    {siteConfig.contact.phone1}
+                                </a>
+                            </li>
+                            <li>
+                                <a href={`mailto:${siteConfig.contact.email}`} className="text-[#FDFBF7] hover:text-[#D9C5A3] transition-colors text-lg font-light">
+                                    {siteConfig.contact.email}
+                                </a>
+                            </li>
+                            <li className="text-[#E8F3E9]/60 text-sm leading-relaxed mt-2">
+                                Gazi Cad. (Eski Kervansaray Karşısı)<br />
+                                Merkez / SİNOP
+                            </li>
+                        </ul>
+                    </div>
 
-                        {/* Minimal Map Box - Now LARGER */}
-                        <div className="sm:col-span-8 relative min-h-[250px] rounded-3xl overflow-hidden border border-orange-100 dark:border-white/5 shadow-inner">
-                            <iframe
-                                src={mapUrl}
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                title="Location Map"
-                                className="w-full h-full transition-all duration-700"
-                            ></iframe>
-                        </div>
+                    {/* Map */}
+                    <div className="md:col-span-5 h-[200px] md:h-auto min-h-[200px] rounded-3xl overflow-hidden border border-[#E8F3E9]/10">
+                        <iframe
+                            src={mapUrl}
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0, filter: 'grayscale(100%) opacity(0.8)' }}
+                            allowFullScreen={true}
+                            loading="lazy"
+                            title="Location Map"
+                        ></iframe>
                     </div>
 
                 </div>
 
                 {/* 3. Bottom Bar */}
-                <div className="border-t border-orange-100 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-xs text-stone-500 dark:text-stone-500 font-medium">
+                <div className="border-t border-[#E8F3E9]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p className="text-[#E8F3E9]/40 text-xs font-light tracking-wide">
                         © {new Date().getFullYear()} Simge Uzun Kaya. Tüm hakları saklıdır.
                     </p>
-                    <div className="flex gap-8 text-[11px] uppercase tracking-[0.2em] font-bold text-stone-400 dark:text-stone-600">
-                        <a href="#" className="hover:text-primary transition-colors">Gizlilik Politikası</a>
-                        <a href="#" className="hover:text-primary transition-colors">KVKK</a>
+                    <div className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-[#D9C5A3]">
+                        <Link href="/privacy" className="hover:text-[#FDFBF7] transition-colors">Gizlilik Politikası</Link>
+                        <Link href="/terms" className="hover:text-[#FDFBF7] transition-colors">KVKK</Link>
                     </div>
                 </div>
 

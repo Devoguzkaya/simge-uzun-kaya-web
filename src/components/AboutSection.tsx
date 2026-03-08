@@ -3,55 +3,58 @@ import Image from 'next/image';
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-background-light dark:bg-background-dark/50" id="about">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-orange-50/50 dark:bg-stone-800/30 rounded-[2rem] p-8 lg:p-12 overflow-hidden relative border border-orange-100 dark:border-stone-700">
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent-yellow via-primary to-accent-coral"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative order-2 md:order-1">
-              <div className="w-full aspect-[3/4] md:aspect-square bg-gray-200 rounded-2xl overflow-hidden shadow-lg relative z-10">
-                <Image
-                  className="object-cover object-center"
-                  alt="Simge Uzun Kaya portresi"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQv29dIQQ5uZNiMGgeMiKXGNO2gB7jYm4skHPJiXcx-bcAo-5dBqw5IwtKtMMVxvyIZjucCtEslBAfXWKL7PfF_AAVH6yukj7Z3r72-D7OtnDb9OCl8HICic_9_PqruOiXkxfaKs8ZOsebJm1KCpF5_QCLLTIyG6vlPGkf3fkA9z1J6xwN24NsxVTfCwSrQBKgxHl8LgpPtySb3m3gq0UnWujbZ8udQB2uzht7Ng0cKsQWXAjAh--ysF4kLB1qz7nAN5GWyQ3ILiZ2"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary rounded-2xl z-0"></div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent-coral/20 rounded-full blur-xl z-0"></div>
+    <section className="py-32 bg-[#FDFBF7] dark:bg-[#1A1A1A] relative overflow-hidden" id="about">
+      {/* Decorative Blob */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#E8F3E9] dark:bg-[#2D3A2E] rounded-full blur-[150px] opacity-50 -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+          
+          {/* Image Side (40%) */}
+          <div className="w-full lg:w-[40%] relative">
+            <div className="relative aspect-[3/4] w-full max-w-[450px] mx-auto rounded-t-full rounded-b-[2rem] overflow-hidden border border-[#D9C5A3]">
+              <Image
+                className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+                alt="Simge Uzun Kaya"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQv29dIQQ5uZNiMGgeMiKXGNO2gB7jYm4skHPJiXcx-bcAo-5dBqw5IwtKtMMVxvyIZjucCtEslBAfXWKL7PfF_AAVH6yukj7Z3r72-D7OtnDb9OCl8HICic_9_PqruOiXkxfaKs8ZOsebJm1KCpF5_QCLLTIyG6vlPGkf3fkA9z1J6xwN24NsxVTfCwSrQBKgxHl8LgpPtySb3m3gq0UnWujbZ8udQB2uzht7Ng0cKsQWXAjAh--ysF4kLB1qz7nAN5GWyQ3ILiZ2"
+                fill
+                sizes="(max-width: 768px) 100vw, 450px"
+              />
+              <div className="absolute inset-0 bg-[#4A6741] mix-blend-multiply opacity-20 pointer-events-none" />
             </div>
-            <div className="order-1 md:order-2 flex flex-col gap-6">
-              <div>
-                <span className="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">Hakkımda</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-text-main dark:text-white mb-4">Merhaba, ben Simge Uzun Kaya.</h2>
-                <p className="text-text-muted/80 dark:text-stone-300 text-lg leading-relaxed mb-4">
-                  Sinop&apos;ta 10 yılı aşkın süredir çocukların karmaşık duygusal dünyalarında yol almalarına yardımcı olan, kendini işine adamış bir psikolojik danışmanım. Yaklaşımım, çocukların kendilerini güvende hissetmelerini sağlayan sıcak, empatik bir bağ ile klinik uzmanlığı dengeler.
-                </p>
-                <p className="text-text-muted/80 dark:text-stone-300 text-lg leading-relaxed">
-                  Her çocuğun oyun, sanat veya sohbet yoluyla kendine özgü bir ifade dili olduğuna inanıyorum. Amacım, bu dili çözmek ve hem çocuğu hem de ailesini güçlendirmektir.
-                </p>
+          </div>
+
+          {/* Text Side (60%) */}
+          <div className="w-full lg:w-[60%] flex flex-col items-start">
+            <span className="text-[#8B7355] text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
+              Hakkımda
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#2C3E2D] dark:text-[#E8F3E9] leading-tight mb-8">
+              Çocukların dilini anlamak, <br className="hidden md:block" />
+              <span className="italic font-light">onların dünyasında</span> var olmaktır.
+            </h2>
+            
+            <div className="space-y-6 text-[#5C5C5C] dark:text-[#B0B0B0] text-lg font-light leading-relaxed max-w-2xl">
+              <p>
+                Sinop&apos;ta 10 yılı aşkın süredir çocukların karmaşık duygusal dünyalarında yol almalarına yardımcı olan, kendini işine adamış bir psikolojik danışmanım. Yaklaşımım, çocukların kendilerini güvende hissetmelerini sağlayan sıcak, empatik bir bağ ile klinik uzmanlığı dengeler.
+              </p>
+              <p>
+                Her çocuğun oyun, sanat veya sohbet yoluyla kendine özgü bir ifade dili olduğuna inanıyorum. Amacım, bu dili çözmek ve hem çocuğu hem de ailesini güçlendirmektir.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-8 mt-12 border-t border-[#E8F3E9] dark:border-[#2D3A2E] pt-8 w-full max-w-2xl">
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-serif text-[#4A6741] dark:text-[#E8F3E9]">Psikoloji Doktora</span>
+                <span className="text-[10px] uppercase tracking-widest text-[#8B7355] font-bold">Akademik Temel</span>
               </div>
-              <div className="flex flex-wrap gap-4 mt-2">
-                <div className="bg-white dark:bg-stone-800 py-2 px-4 rounded-lg shadow-sm border border-orange-100 dark:border-stone-700 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-xl">school</span>
-                  <span className="text-sm font-semibold text-text-main dark:text-white">Psikoloji Doktora</span>
-                </div>
-                <div className="bg-white dark:bg-stone-800 py-2 px-4 rounded-lg shadow-sm border border-orange-100 dark:border-stone-700 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-accent-coral text-xl">favorite</span>
-                  <span className="text-sm font-semibold text-text-main dark:text-white">Empati Odaklı</span>
-                </div>
-              </div>
-              <div className="mt-4 relative h-12 w-48">
-                <Image
-                  className="object-contain object-left opacity-60 dark:invert hue-rotate-15 sepia"
-                  alt="Simge Uzun Kaya imzası"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW0JjgOI-E-Dr_34sOTHhxgG01x3FOCNp2BoFp8JBOufpTuDcUL5j4TiS5-ZkcFHpfVL4sTpzlltcd5JfS5HyAi_89ydRJk3gNVsIS77ug2KAzRWd7R7W0j3kIB7OAXYBdxHuJrDvLAP3q5omNGzWJwR8bPnkECb1ClrQLlAXUg6oEM2rF9QZ-YiohVdTJy4dw5Ct8scvgVtroWDjxs1CLOIyEKhsIuAq8xAje4bE4AjtS9VEzN860Ohrfg5rKkvu4DTpRJe4aSDQA"
-                  fill
-                  sizes="200px"
-                />
+              <div className="w-px h-12 bg-[#E8F3E9] dark:bg-[#2D3A2E] hidden md:block"></div>
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-serif text-[#4A6741] dark:text-[#E8F3E9]">Empati Odaklı</span>
+                <span className="text-[10px] uppercase tracking-widest text-[#8B7355] font-bold">Terapi Yaklaşımı</span>
               </div>
             </div>
+
           </div>
         </div>
       </div>

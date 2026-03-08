@@ -10,8 +10,8 @@ const ContactFooterSection = () => {
         <div className="bg-white dark:bg-stone-800 rounded-[2rem] p-8 md:p-12 shadow-xl shadow-orange-900/5 mb-16 flex flex-col md:flex-row items-center justify-between gap-8 border border-orange-100 dark:border-stone-700 relative overflow-hidden">
           <div className="absolute right-0 top-0 w-64 h-64 bg-accent-yellow/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
           <div className="relative z-10 max-w-xl text-center md:text-left">
-            <h2 className="text-3xl font-bold text-text-main dark:text-white mb-4">Tanışmaya hazır mısınız?</h2>
-            <p className="text-text-muted/80 dark:text-stone-400 mb-8">Sizi dinlemek için buradayız. Aileniz için doğru kişi olup olmadığımızı görmek adına ücretsiz 15 dakikalık bir ön görüşme planlayın.</p>
+            <h2 className="text-3xl font-bold text-text-main dark:text-white mb-4">Danışmanlık Sürecinize Başlayın.</h2>
+            <p className="text-text-muted/80 dark:text-stone-400 mb-8">Sizi dinlemek ve anlamak için buradayız. Çocuğunuz veya kendiniz için en uygun destek sürecini başlatmak adına bir değerlendirme seansı planlayabilirsiniz.</p>
             <div className="flex flex-col gap-3 items-start">
               <a className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-orange-100 dark:bg-stone-700 dark:border-stone-600 hover:bg-orange-50 dark:hover:bg-stone-600 transition-colors text-text-main dark:text-white font-medium shadow-sm w-full sm:w-auto" href={`tel:${siteConfig.contact.phone1_clean}`}>
                 <span className="material-symbols-outlined text-primary">call</span>

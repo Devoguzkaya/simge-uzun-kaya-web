@@ -1,0 +1,14 @@
+hero bölümündeki metin değişecek
+daha fazla bilgi butonu hizmetlere yönlendirsin
+1000+ Aile Tarafından Güveniliyor
+görseller değişecek
+ilk heroda çocuk ergen aile
+ikinci heroda yetişkin ele alınacak
+Hakkımda yazısı 60-70 kelime arası. simge yazıp atacak
+fotoğraf atacak simge
+Hizmet alanlarımız kısmındaki giriş metni değişecek (simge atacek)
+Hizmet kartlarında görsele tıklayınca simgenin hizmeti açıkladığı video oynatılacak
+referans kartlarında yıldızlar ve sağ üst köşedeki 99 yazısı kalkacak
+isim yazmayacak hizmet ismi yazacak.
+
+sertifikalarını atacak.

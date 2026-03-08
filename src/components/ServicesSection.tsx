@@ -1,141 +1,134 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 
+const services = [
+  {
+    id: "01",
+    title: "Çocuk, Ergen & Yetişkin",
+    desc: "6 aydan itibaren her gelişim evresine özel duygusal destek ve danışmanlık.",
+    img: "/images/services/1.png",
+    videoId: "dQw4w9WgXcQ" // TODO: Simge Hanım'ın video linki gelecek
+  },
+  {
+    id: "02",
+    title: "Oyun Terapisi",
+    desc: "Çocukların dünyayı anlamlandırma yolu olan oyunu kullanarak çözüm odaklı terapi süreci.",
+    img: "/images/services/oyunterapisi.png",
+    videoId: "dQw4w9WgXcQ"
+  },
+  {
+    id: "03",
+    title: "Moxo Dikkat Testi",
+    desc: "Dikkat, dürtüsellik ve hiperaktivite performansını ölçen bilgisayar destekli klinik test.",
+    img: "/images/services/moxo.png",
+    videoId: "dQw4w9WgXcQ"
+  },
+  {
+    id: "04",
+    title: "Attentioner Programı",
+    desc: "7-18 yaş arası dikkat ve odaklanma becerilerini geliştiren nöropsikolojik tabanlı eğitim.",
+    img: "/images/services/attention2.png",
+    videoId: "dQw4w9WgXcQ"
+  },
+  {
+    id: "05",
+    title: "Sınav Danışmanlığı",
+    desc: "Sınav kaygısı ve motivasyon yönetimiyle öğrencilerin başarılarını zirveye taşıma.",
+    img: "/images/services/exam.png",
+    videoId: "dQw4w9WgXcQ"
+  },
+  {
+    id: "06",
+    title: "Online Danışmanlık",
+    desc: "Mesafe fark etmeksizin, güvenli dijital platformlar üzerinden ev konforunda destek.",
+    img: "/images/services/online.png",
+    videoId: "dQw4w9WgXcQ"
+  }
+];
+
 const ServicesSection = () => {
+  const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
+
   return (
-    <section className="py-20 bg-white/50 dark:bg-stone-900/50" id="services">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-text-main dark:text-white mb-4">
-          Hizmet Alanlarımız
-        </h2>
-        <p className="text-lg text-text-muted/80 dark:text-stone-400 max-w-2xl mx-auto">
-          6 aydan itibaren her yaş grubuna özel, bilimsel temelli ve empati odaklı danışmanlık yaklaşımlarımızla yanınızdayız.
-        </p>
-      </div>
+    <section className="py-32 bg-white dark:bg-[#1A1A1A]" id="services">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* 1. Çocuk, Ergen & Yetişkin Danışmanlığı */}
-          <div className="flex flex-col bg-white dark:bg-stone-800 rounded-3xl p-8 border border-orange-100 dark:border-stone-700 shadow-xl shadow-orange-900/5 hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-              <span className="material-symbols-outlined text-3xl">groups</span>
-            </div>
-            <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">Çocuk, Ergen & Yetişkin</h3>
-            <p className="text-stone-600 dark:text-stone-400 text-sm mb-6 leading-relaxed">
-              6 aydan itibaren her gelişim evresine özel duygusal destek ve danışmanlık.
-            </p>
-            <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <Image
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                src="/images/services/1.png"
-                alt="Çocuk, Ergen ve Yetişkin Danışmanlığı"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
+        <div className="flex flex-col lg:flex-row items-end justify-between mb-24 gap-8">
+          <div className="max-w-2xl">
+            <span className="text-[#8B7355] text-xs font-bold uppercase tracking-[0.3em] mb-4 block">
+              Uzmanlık Alanları
+            </span>
+            <h2 className="text-5xl lg:text-7xl font-serif text-[#2C3E2D] dark:text-[#E8F3E9] leading-tight">
+              Klinik <br />
+              <span className="italic font-light">Hizmetlerimiz.</span>
+            </h2>
           </div>
-
-          {/* 2. Deneyimsel Oyun Terapisi */}
-          <div className="flex flex-col bg-white dark:bg-stone-800 rounded-3xl p-8 border border-orange-100 dark:border-stone-700 shadow-xl shadow-orange-900/5 hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-accent-yellow/10 flex items-center justify-center mb-6 text-yellow-600 group-hover:bg-accent-yellow group-hover:text-white transition-all duration-300">
-              <span className="material-symbols-outlined text-3xl">smart_toy</span>
-            </div>
-            <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">Oyun Terapisi</h3>
-            <p className="text-stone-600 dark:text-stone-400 text-sm mb-6 leading-relaxed">
-              Çocukların dünyayı anlamlandırma yolu olan oyunu kullanarak çözüm odaklı terapi süreci.
+          <div className="lg:pb-4">
+            <p className="text-xl text-[#5C5C5C] dark:text-[#B0B0B0] max-w-md font-light">
+              Bilimsel temelli ve empati odaklı yaklaşımlarımızla her yaş grubuna özel destek.
             </p>
-            <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <Image
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                src="/images/services/oyunterapisi.png"
-                alt="Deneyimsel Oyun Terapisi Seansı"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-          </div>
-
-          {/* 3. Moxo Dikkat Testi */}
-          <div className="flex flex-col bg-white dark:bg-stone-800 rounded-3xl p-8 border border-orange-100 dark:border-stone-700 shadow-xl shadow-orange-900/5 hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 text-orange-600 group-hover:bg-accent-blue group-hover:text-white transition-all duration-300">
-              <span className="material-symbols-outlined text-3xl">timer</span>
-            </div>
-            <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">Moxo Dikkat Testi</h3>
-            <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">Moxo Dikkat Testi</h3>
-            <p className="text-stone-600 dark:text-stone-400 text-sm mb-8 leading-relaxed">
-              Dikkat, dürtüsellik ve hiperaktivite performansını ölçen bilgisayar destekli klinik test.
-            </p>
-            <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <Image
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                src="/images/services/moxo.png"
-                alt="Moxo Dikkat Testi Uygulaması"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-          </div>
-
-          {/* 4. Attentioner Dikkat Programı */}
-          <div className="flex flex-col bg-white dark:bg-stone-800 rounded-3xl p-8 border border-orange-100 dark:border-stone-700 shadow-xl shadow-orange-900/5 hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-accent-coral/10 flex items-center justify-center mb-6 text-rose-500 group-hover:bg-accent-coral group-hover:text-white transition-all duration-300">
-              <span className="material-symbols-outlined text-3xl">psychology</span>
-            </div>
-            <h3 className="text-xl font-bold text-text-main dark:text-white mb-3">Attentioner Programı</h3>
-            <p className="text-stone-600 dark:text-stone-400 text-sm mb-6 leading-relaxed">
-              7-18 yaş arası dikkat ve odaklanma becerilerini geliştiren nöropsikolojik tabanlı eğitim.
-            </p>
-            <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <Image
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                src="/images/services/attention2.png"
-                alt="Attentioner Dikkat Programı Eğitimi"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-          </div>
-
-          {/* 5. Sınav Danışmanlığı */}
-          <div className="flex flex-col bg-white dark:bg-stone-800 rounded-3xl p-8 border border-orange-100 dark:border-stone-700 shadow-xl shadow-orange-900/5 hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center mb-6 text-orange-600 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-              <span className="material-symbols-outlined text-3xl">school</span>
-            </div>
-            <h3 className="text-xl font-bold text-text-main dark:text-white mb-3">Sınav Danışmanlığı</h3>
-            <p className="text-stone-600 dark:text-stone-400 text-sm mb-6 leading-relaxed">
-              Sınav kaygısı ve motivasyon yönetimiyle öğrencilerin başarılarını zirveye taşıma.
-            </p>
-            <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <Image
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                src="/images/services/exam.png"
-                alt="Öğrenciler için Sınav Danışmanlığı ve Rehberlik"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-          </div>
-
-          {/* 6. Online Danışmanlık */}
-          <div className="flex flex-col bg-white dark:bg-stone-800 rounded-3xl p-8 border border-orange-100 dark:border-stone-700 shadow-xl shadow-orange-900/5 hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-              <span className="material-symbols-outlined text-3xl">videocam</span>
-            </div>
-            <h3 className="text-xl font-bold text-text-main dark:text-white mb-3">Online Danışmanlık</h3>
-            <p className="text-stone-600 dark:text-stone-400 text-sm mb-6 leading-relaxed">
-              Mesafe fark etmeksizin, güvenli dijital platformlar üzerinden ev konforunda destek.
-            </p>
-            <div className="mt-auto w-full h-48 rounded-2xl bg-gray-100 overflow-hidden relative">
-              <Image
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                src="/images/services/online.png"
-                alt="Güvenli Platformlar üzerinden Online Danışmanlık"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-[#E8F3E9] dark:border-[#2D3A2E]">
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="group relative flex flex-col justify-between p-10 lg:p-12 border-b border-r border-[#E8F3E9] dark:border-[#2D3A2E] hover:bg-[#FDFBF7] dark:hover:bg-[#2D3A2E]/20 transition-colors duration-500 min-h-[450px] overflow-hidden cursor-pointer"
+              onClick={() => playingVideoId === service.id ? setPlayingVideoId(null) : setPlayingVideoId(service.id)}
+            >
+              <div className="relative z-30 flex justify-between items-start mb-12">
+                <span className="text-sm font-bold text-[#8B7355] border border-[#D9C5A3] rounded-full px-4 py-1 bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-sm">
+                  {service.id}
+                </span>
+                <div className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${playingVideoId === service.id ? 'bg-red-600 border-red-600 text-white' : 'border-[#E8F3E9] bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-sm group-hover:bg-[#4A6741] group-hover:border-[#4A6741] group-hover:text-white'}`}>
+                  <span className="material-symbols-outlined text-sm">{playingVideoId === service.id ? 'close' : 'play_arrow'}</span>
+                </div>
+              </div>
+
+              <div className={`relative z-10 transition-opacity duration-300 ${playingVideoId === service.id ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                <h3 className="text-2xl font-serif text-[#2C3E2D] dark:text-[#E8F3E9] mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-[#5C5C5C] dark:text-[#B0B0B0] font-light leading-relaxed">
+                  {service.desc}
+                </p>
+                <div className="mt-6 flex items-center text-sm font-bold text-[#8B7355] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="material-symbols-outlined mr-2 text-base">smart_display</span>
+                  Videoyu İzle
+                </div>
+              </div>
+
+              {/* Video Player or Hover Image Reveal */}
+              {playingVideoId === service.id ? (
+                <div className="absolute inset-0 z-20 bg-black">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${service.videoId}?autoplay=1&controls=1`}
+                    title={service.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              ) : (
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-10 pointer-events-none transition-opacity duration-700 z-0">
+                  <Image
+                    src={service.img}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

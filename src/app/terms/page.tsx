@@ -18,7 +18,7 @@ export default function TermsOfService() {
                     <section>
                         <h2 className="text-2xl font-bold text-text-main mb-4">1. Hizmet Kapsamı</h2>
                         <p>
-                            Simge Uzun Kaya tarafından sunulan hizmetler; çocuk psikolojisi, aile danışmanlığı ve eğitsel değerlendirme alanlarını kapsayan profesyonel danışmanlık hizmetleridir. Bu web sitesi üzerinden randevu talebi oluşturulması, bir danışman-danışan ilişkisinin kurulduğu anlamına gelmez; bu ilişki ancak ilk görüşme ve karşılıklı onay sonrasında başlar.
+                            Simge Uzun Kaya tarafından sunulan hizmetler; çocuk psikolojisi, aile danışmanlığı ve eğitsel değerlendirme alanlarını kapsayan profesyonel danışmanlık hizmetleridir. Bu web sitesi üzerinden randevu talebi oluşturulması ile süreç başlar. Ön görüşme hizmeti sunulmamakta olup, planlanan tüm randevular doğrudan değerlendirme/terapi seansı olarak işleme alınır.
                         </p>
                     </section>
 
