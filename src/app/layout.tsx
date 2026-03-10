@@ -93,7 +93,7 @@ export default function RootLayout({
 }>) {
   return (
     // html etiketine "light" sınıfını ekledik.
-    <html lang="tr" className="light">
+    <html lang="tr" className="light" suppressHydrationWarning>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
         <script
@@ -104,6 +104,7 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${playfairDisplay.variable} font-sans antialiased bg-background-light dark:bg-background-dark text-text-main overflow-x-hidden`}
         aria-label="Root layout"
+        suppressHydrationWarning
       >
         {children}
         <Analytics />

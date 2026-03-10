@@ -14,9 +14,9 @@ export const siteConfig = {
   },
   nav: [
     { label: "Ana Sayfa", href: "/" },
-    { label: "Hakkımda", href: "#about" },
-    { label: "Hizmetler", href: "#services" },
-    { label: "Referanslar", href: "#testimonials" },
-    { label: "Sıkça Sorulanlar", href: "#faq" },
+    { label: "Hakkımda", href: "/#about" },
+    { label: "Hizmetler", href: "/#services" },
+    { label: "Referanslar", href: "/#testimonials" },
+    { label: "Sıkça Sorulanlar", href: "/#faq" },
   ]
 };
