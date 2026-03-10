@@ -3,60 +3,63 @@ import Image from 'next/image';
 
 const AboutSection = () => {
   return (
-    <section className="py-32 bg-[#FDFBF7] dark:bg-[#1A1A1A] relative overflow-hidden" id="about">
-      {/* Decorative Blob */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#E8F3E9] dark:bg-[#2D3A2E] rounded-full blur-[150px] opacity-50 -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+    <section className="py-40 bg-ivory dark:bg-background-dark relative overflow-hidden" id="about">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col items-center">
 
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
-          
-          {/* Image Side (40%) */}
-          <div className="w-full lg:w-[40%] relative">
-            <div className="relative aspect-[3/4] w-full max-w-[450px] mx-auto rounded-t-full rounded-b-[2rem] overflow-hidden border border-[#D9C5A3]">
-              <Image
-                className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
-                alt="Simge Uzun Kaya"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQv29dIQQ5uZNiMGgeMiKXGNO2gB7jYm4skHPJiXcx-bcAo-5dBqw5IwtKtMMVxvyIZjucCtEslBAfXWKL7PfF_AAVH6yukj7Z3r72-D7OtnDb9OCl8HICic_9_PqruOiXkxfaKs8ZOsebJm1KCpF5_QCLLTIyG6vlPGkf3fkA9z1J6xwN24NsxVTfCwSrQBKgxHl8LgpPtySb3m3gq0UnWujbZ8udQB2uzht7Ng0cKsQWXAjAh--ysF4kLB1qz7nAN5GWyQ3ILiZ2"
-                fill
-                sizes="(max-width: 768px) 100vw, 450px"
-              />
-              <div className="absolute inset-0 bg-[#4A6741] mix-blend-multiply opacity-20 pointer-events-none" />
-            </div>
-          </div>
-
-          {/* Text Side (60%) */}
-          <div className="w-full lg:w-[60%] flex flex-col items-start">
-            <span className="text-[#8B7355] text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
-              Hakkımda
-            </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#2C3E2D] dark:text-[#E8F3E9] leading-tight mb-8">
-              Çocukların dilini anlamak, <br className="hidden md:block" />
-              <span className="italic font-light">onların dünyasında</span> var olmaktır.
-            </h2>
-            
-            <div className="space-y-6 text-[#5C5C5C] dark:text-[#B0B0B0] text-lg font-light leading-relaxed max-w-2xl">
-              <p>
-                Sinop&apos;ta 10 yılı aşkın süredir çocukların karmaşık duygusal dünyalarında yol almalarına yardımcı olan, kendini işine adamış bir psikolojik danışmanım. Yaklaşımım, çocukların kendilerini güvende hissetmelerini sağlayan sıcak, empatik bir bağ ile klinik uzmanlığı dengeler.
-              </p>
-              <p>
-                Her çocuğun oyun, sanat veya sohbet yoluyla kendine özgü bir ifade dili olduğuna inanıyorum. Amacım, bu dili çözmek ve hem çocuğu hem de ailesini güçlendirmektir.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-8 mt-12 border-t border-[#E8F3E9] dark:border-[#2D3A2E] pt-8 w-full max-w-2xl">
-              <div className="flex flex-col gap-1">
-                <span className="text-2xl font-serif text-[#4A6741] dark:text-[#E8F3E9]">Psikoloji Doktora</span>
-                <span className="text-[10px] uppercase tracking-widest text-[#8B7355] font-bold">Akademik Temel</span>
-              </div>
-              <div className="w-px h-12 bg-[#E8F3E9] dark:bg-[#2D3A2E] hidden md:block"></div>
-              <div className="flex flex-col gap-1">
-                <span className="text-2xl font-serif text-[#4A6741] dark:text-[#E8F3E9]">Empati Odaklı</span>
-                <span className="text-[10px] uppercase tracking-widest text-[#8B7355] font-bold">Terapi Yaklaşımı</span>
-              </div>
-            </div>
-
-          </div>
+        {/* Header */}
+        <div className="text-center mb-24 w-full max-w-5xl">
+          <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-8 block">
+            Hakkımda
+          </span>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-pine dark:text-ivory leading-[1.1] mx-auto tracking-tight">
+            Çocukların dilini anlamak, <br className="hidden md:block" />
+            <span className="italic font-light text-accent-terracotta">onların dünyasında</span> var olmaktır.
+          </h2>
         </div>
+
+        {/* Editorial Layout: Image Left, Text Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start w-full max-w-6xl">
+
+          {/* Subtle Image Column */}
+          <div className="lg:col-span-5 relative w-full aspect-[4/5] rounded-[48px] overflow-hidden group">
+            <Image
+              className="object-cover filter grayscale hover:grayscale-0 transition-all duration-[1500ms]"
+              alt="Simge Uzun Kaya"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQv29dIQQ5uZNiMGgeMiKXGNO2gB7jYm4skHPJiXcx-bcAo-5dBqw5IwtKtMMVxvyIZjucCtEslBAfXWKL7PfF_AAVH6yukj7Z3r72-D7OtnDb9OCl8HICic_9_PqruOiXkxfaKs8ZOsebJm1KCpF5_QCLLTIyG6vlPGkf3fkA9z1J6xwN24NsxVTfCwSrQBKgxHl8LgpPtySb3m3gq0UnWujbZ8udQB2uzht7Ng0cKsQWXAjAh--ysF4kLB1qz7nAN5GWyQ3ILiZ2"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
+            {/* Soft Overlay */}
+            <div className="absolute inset-0 bg-pine mix-blend-multiply opacity-10 group-hover:opacity-0 transition-opacity duration-1000" />
+          </div>
+
+          {/* Editorial Content Column */}
+          <div className="lg:col-span-7 flex flex-col gap-10">
+            <div className="text-pine/80 dark:text-ivory/80 text-xl lg:text-2xl font-light leading-relaxed">
+              <p className="mb-8">
+                <span className="text-6xl lg:text-8xl font-serif text-accent-terracotta float-left mr-6 mt-2 leading-[0.6]">S</span>
+                inop&apos;ta 10 yılı aşkın süredir çocukların karmaşık duygusal dünyalarında yol almalarına yardımcı olan, kendini işine adamış bir psikolojik danışmanım. Yaklaşımım, çocukların kendilerini güvende hissetmelerini sağlayan sıcak, empatik bir bağ ile klinik uzmanlığı dengeler.
+              </p>
+              <p>
+                Her çocuğun oyun, sanat veya sohbet yoluyla kendine özgü bir ifade dili olduğuna inanıyorum. Amacım, bu dili çözmek ve hem çocuğu hem de ailesini güçlendirmektir. Anlaşıldığını hisseden çocuk, potansiyelini keşfetmeye en yakın çocuktur.
+              </p>
+            </div>
+
+            {/* Micro-Stats / Credentials Line */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10 pt-10 border-t border-pine/10 dark:border-ivory/10">
+              <div className="flex flex-col gap-3">
+                <span className="text-3xl lg:text-4xl font-serif text-pine dark:text-ivory">Psikoloji Doktora</span>
+                <span className="text-[10px] uppercase tracking-widest text-accent-terracotta font-bold">Akademik Temel</span>
+              </div>
+              <div className="flex flex-col gap-3">
+                <span className="text-3xl lg:text-4xl font-serif text-pine dark:text-ivory">Empati Odaklı</span>
+                <span className="text-[10px] uppercase tracking-widest text-accent-terracotta font-bold">Terapi Yaklaşımı</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
   );

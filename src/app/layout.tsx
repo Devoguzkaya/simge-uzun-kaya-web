@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google"; // Plus Jakarta Sans'ı import ediyoruz
+import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-// Plus Jakarta Sans fontunu yüklüyoruz
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"], // Tüm ağırlıkları ekledik
-  variable: "--font-display",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -96,7 +102,8 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakartaSans.variable} font-display antialiased bg-background-light dark:bg-background-dark text-text-main overflow-x-hidden selection:bg-primary/30`} // Tailwind sınıfları eklendi
+        className={`${plusJakartaSans.variable} ${playfairDisplay.variable} font-sans antialiased bg-background-light dark:bg-background-dark text-text-main overflow-x-hidden`}
+        aria-label="Root layout"
       >
         {children}
         <Analytics />

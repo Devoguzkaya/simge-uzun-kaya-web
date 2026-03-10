@@ -26,39 +26,39 @@ const FAQSection = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-32 bg-white dark:bg-[#1A1A1A]" id="faq">
+        <section className="py-32 bg-ivory dark:bg-background-dark" id="faq">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-32">
 
                     {/* Left Side: Title */}
                     <div className="w-full lg:w-[40%]">
-                        <span className="text-[#8B7355] text-xs font-bold uppercase tracking-[0.3em] mb-4 block">
+                        <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
                             Rehberlik
                         </span>
-                        <h2 className="text-5xl lg:text-7xl font-serif text-[#2C3E2D] dark:text-[#E8F3E9] leading-tight mb-6">
+                        <h2 className="text-5xl lg:text-7xl font-serif text-pine dark:text-ivory leading-[1.1] mb-8">
                             Sıkça <br />
-                            <span className="italic font-light">Sorulanlar.</span>
+                            <span className="italic font-light text-accent-terracotta">Sorulanlar.</span>
                         </h2>
-                        <p className="text-xl text-[#5C5C5C] dark:text-[#B0B0B0] font-light">
-                            Sürecimiz hakkında merak ettiğiniz detaylar.
+                        <p className="text-xl text-pine/70 dark:text-ivory/70 font-light leading-relaxed">
+                            Sürecimiz hakkında merak ettiğiniz detaylar ve bilinmesi gerekenler.
                         </p>
                     </div>
 
                     {/* Right Side: Accordion */}
                     <div className="w-full lg:w-[60%] flex flex-col">
-                        <div className="border-t border-[#E8F3E9] dark:border-[#2D3A2E]">
+                        <div className="border-t border-pine/10 dark:border-ivory/10">
                             {faqs.map((faq, index) => (
-                                <div key={index} className="border-b border-[#E8F3E9] dark:border-[#2D3A2E]">
+                                <div key={index} className="border-b border-pine/10 dark:border-ivory/10 group">
                                     <button
                                         onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                                        className="w-full py-8 text-left flex items-center justify-between group"
+                                        className="w-full py-10 text-left flex items-start justify-between outline-none"
                                         aria-expanded={activeIndex === index}
                                     >
-                                        <span className={`text-xl md:text-2xl font-serif transition-colors duration-300 ${activeIndex === index ? 'text-[#4A6741] dark:text-[#E8F3E9]' : 'text-[#2C3E2D] dark:text-[#B0B0B0] group-hover:text-[#4A6741]'}`}>
+                                        <span className={`text-2xl md:text-3xl font-serif transition-colors duration-500 leading-snug pr-8 ${activeIndex === index ? 'text-accent-terracotta' : 'text-pine dark:text-ivory group-hover:text-accent-terracotta/80'}`}>
                                             {faq.question}
                                         </span>
-                                        <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${activeIndex === index ? 'border-[#4A6741] bg-[#4A6741] text-white' : 'border-[#D9C5A3] text-[#8B7355] group-hover:border-[#4A6741] group-hover:text-[#4A6741]'}`}>
-                                            <span className={`material-symbols-outlined text-sm transition-transform duration-500 ${activeIndex === index ? 'rotate-180' : ''}`}>
+                                        <div className={`mt-1 flex-shrink-0 w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-500 ${activeIndex === index ? 'border-accent-terracotta bg-accent-terracotta text-pine' : 'border-pine/20 dark:border-ivory/20 text-pine dark:text-ivory group-hover:border-accent-terracotta group-hover:text-accent-terracotta'}`}>
+                                            <span className={`material-symbols-outlined text-sm transition-transform duration-700 ${activeIndex === index ? 'rotate-180' : ''}`}>
                                                 add
                                             </span>
                                         </div>
@@ -69,10 +69,10 @@ const FAQSection = () => {
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+                                                transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
                                                 className="overflow-hidden"
                                             >
-                                                <div className="pb-8 pr-12 text-[#5C5C5C] dark:text-[#B0B0B0] text-lg font-light leading-relaxed">
+                                                <div className="pb-10 pr-12 text-pine/70 dark:text-ivory/70 text-lg lg:text-xl font-light leading-relaxed">
                                                     {faq.answer}
                                                 </div>
                                             </motion.div>
