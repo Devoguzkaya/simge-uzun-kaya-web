@@ -2,132 +2,110 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-
-const services = [
-  {
-    id: "01",
-    title: "Çocuk, Ergen & Yetişkin",
-    desc: "6 aydan itibaren her gelişim evresine özel duygusal destek ve danışmanlık.",
-    img: "/images/services/1.png",
-    videoId: "dQw4w9WgXcQ"
-  },
-  {
-    id: "02",
-    title: "Oyun Terapisi",
-    desc: "Çocukların dünyayı anlamlandırma yolu olan oyunu kullanarak çözüm odaklı terapi süreci.",
-    img: "/images/services/oyunterapisi.png",
-    videoId: "dQw4w9WgXcQ"
-  },
-  {
-    id: "03",
-    title: "Moxo Dikkat Testi",
-    desc: "Dikkat, dürtüsellik ve hiperaktivite performansını ölçen bilgisayar destekli klinik test.",
-    img: "/images/services/moxo.png",
-    videoId: "dQw4w9WgXcQ"
-  },
-  {
-    id: "04",
-    title: "Attentioner Programı",
-    desc: "7-18 yaş arası dikkat ve odaklanma becerilerini geliştiren nöropsikolojik tabanlı eğitim.",
-    img: "/images/services/attention2.png",
-    videoId: "dQw4w9WgXcQ"
-  },
-  {
-    id: "05",
-    title: "Sınav Danışmanlığı",
-    desc: "Sınav kaygısı ve motivasyon yönetimiyle öğrencilerin başarılarını zirveye taşıma.",
-    img: "/images/services/exam.png",
-    videoId: "dQw4w9WgXcQ"
-  },
-  {
-    id: "06",
-    title: "Online Danışmanlık",
-    desc: "Mesafe fark etmeksizin, güvenli dijital platformlar üzerinden ev konforunda destek.",
-    img: "/images/services/online.png",
-    videoId: "dQw4w9WgXcQ"
-  }
-];
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { servicesData } from '@/data/services';
 
 const ServicesSection = () => {
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
 
+  // Split services array using standard component structure and alternating layouts
   return (
-    <section className="py-32 lg:py-48 bg-pine text-ivory relative overflow-hidden" id="services">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-[-10%] w-[800px] h-[800px] bg-accent-terracotta/10 rounded-full blur-[120px] pointer-events-none" />
+    <section className="py-32 bg-ivory dark:bg-background-dark text-pine dark:text-ivory relative overflow-hidden" id="services">
+      {/* Editorial Decorative Blob */}
+      <div className="absolute top-[20%] right-[-10%] w-[800px] h-[800px] bg-accent-terracotta/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
 
-        {/* Header Content */}
-        <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
-          <div className="max-w-3xl">
-            <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
-              Uzmanlık Alanları
-            </span>
-            <h2 className="text-5xl lg:text-7xl font-serif text-ivory leading-tight">
-              Klinik <span className="italic font-light text-accent-terracotta">Hizmetlerimiz.</span>
-            </h2>
-          </div>
-          <div className="md:pb-4 max-w-sm">
-            <p className="text-ivory/70 text-lg lg:text-xl font-light leading-relaxed">
-              Bilimsel temelli ve empati odaklı yaklaşımlarımızla her yaş grubuna özel destek.
-            </p>
-          </div>
+        {/* Section Header */}
+        <div className="mb-24 md:mb-32 text-center md:text-left">
+          <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
+            Klinik Hizmetlerimiz
+          </span>
+          <h2 className="text-5xl lg:text-7xl font-serif text-pine dark:text-ivory leading-[1.1] max-w-4xl">
+            Sizin İçin En Doğru <br className="hidden md:block" />
+            <span className="italic font-light text-accent-terracotta">Yol Haritası.</span>
+          </h2>
         </div>
 
-        {/* Horizontal Scroll Area */}
-        <div className="flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory no-scrollbar -mx-6 px-6 lg:-mx-12 lg:px-12">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="group relative flex-shrink-0 w-[85vw] sm:w-[500px] lg:w-[600px] flex flex-col justify-between p-10 lg:p-14 bg-ivory text-pine rounded-[40px] snap-center hover:-translate-y-2 transition-transform duration-500 min-h-[500px] overflow-hidden cursor-pointer"
-              onClick={() => playingVideoId === service.id ? setPlayingVideoId(null) : setPlayingVideoId(service.id)}
-            >
-              {/* Item Meta */}
-              <div className="relative z-30 flex justify-between items-start mb-12">
-                <span className="text-xs font-bold font-serif text-accent-terracotta border border-accent-terracotta/30 rounded-full px-5 py-2 bg-ivory/90 backdrop-blur-sm">
-                  {service.id}
-                </span>
-                <div className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${playingVideoId === service.id ? 'bg-red-600 border-red-600 text-white' : 'border-pine/20 bg-ivory/90 backdrop-blur-sm group-hover:bg-accent-terracotta group-hover:border-accent-terracotta group-hover:text-pine'}`}>
-                  <span className="material-symbols-outlined">{playingVideoId === service.id ? 'close' : 'play_arrow'}</span>
-                </div>
-              </div>
+        {/* Dynamic Zigzag Services Render */}
+        <div className="flex flex-col gap-32 lg:gap-40">
+          {servicesData.map((service, index) => {
+            const isEven = index % 2 === 0;
 
-              {/* Item Content */}
-              <div className={`relative z-10 transition-opacity duration-300 ${playingVideoId === service.id ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-                <h3 className="text-3xl lg:text-4xl font-serif text-pine mb-4 leading-tight">
-                  {service.title}
-                </h3>
-                <p className="text-pine/70 font-light text-lg lg:text-xl leading-relaxed max-w-sm">
-                  {service.desc}
-                </p>
-                <div className="mt-8 flex items-center text-sm font-bold text-accent-terracotta opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="material-symbols-outlined mr-2">smart_display</span>
-                  Videoyu İzle
-                </div>
-              </div>
+            return (
+              <div key={service.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center group`}>
 
-              {/* Video/Image Backing */}
-              {playingVideoId === service.id ? (
-                <div className="absolute inset-0 z-20 bg-black">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${service.videoId}?autoplay=1&controls=1`}
-                    title={service.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
+                {/* Visual Side */}
+                <div className={`relative w-full aspect-[4/3] lg:aspect-[3/3.5] rounded-[48px] overflow-hidden ${isEven ? 'lg:order-1' : 'lg:order-2'} bg-pine/5 dark:bg-ivory/5`}>
+
+                  {/* Play Button Overlay (Visible if video not playing) */}
+                  <div className={`absolute inset-0 z-30 flex items-center justify-center transition-opacity duration-500 ${playingVideoId === service.id ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                    <button
+                      onClick={() => setPlayingVideoId(service.id)}
+                      className="group/btn w-20 h-20 bg-ivory/90 backdrop-blur-md text-pine border border-ivory/50 rounded-full flex items-center justify-center shadow-2xl hover:bg-accent-terracotta hover:text-ivory hover:border-accent-terracotta hover:scale-110 transition-all duration-500 z-30"
+                      aria-label={`${service.title} videosunu oynat`}
+                    >
+                      <span className="material-symbols-outlined text-3xl ml-1">play_arrow</span>
+                    </button>
+                  </div>
+
+                  {playingVideoId === service.id ? (
+                    <div className="absolute inset-0 z-20 bg-black">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${service.videoId}?autoplay=1&controls=1`}
+                        title={service.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                      <button
+                        onClick={() => setPlayingVideoId(null)}
+                        className="absolute top-4 right-4 z-50 w-10 h-10 bg-black/50 hover:bg-black/80 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-colors"
+                      >
+                        <span className="material-symbols-outlined text-sm">close</span>
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="absolute inset-0 transition-opacity duration-700 z-10">
+                      <Image src={service.img} alt={service.title} fill className="object-cover transform transition-transform duration-[2000ms] group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-pine mix-blend-multiply opacity-10 group-hover:opacity-0 transition-opacity duration-700" />
+                    </div>
+                  )}
                 </div>
-              ) : (
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-10 pointer-events-none transition-opacity duration-700 z-0">
-                  <Image src={service.img} alt={service.title} fill className="object-cover" />
+
+                {/* Content Side */}
+                <div className={`flex flex-col items-start ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                  {/* Decorative Number */}
+                  <span className="text-8xl lg:text-[140px] font-serif text-pine/5 dark:text-ivory/5 leading-none select-none mb-[-40px] lg:mb-[-60px] pointer-events-none font-bold">
+                    {service.id}
+                  </span>
+
+                  <div className="relative z-10 w-full lg:max-w-lg">
+                    <h3 className="text-3xl lg:text-5xl font-serif leading-[1.15] mb-6">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-pine/70 dark:text-ivory/70 text-lg lg:text-xl font-light leading-relaxed mb-10">
+                      {service.shortDesc}
+                    </p>
+
+                    <Link
+                      href={`/hizmetlerimiz/${service.slug}`}
+                      className="inline-flex items-center gap-4 text-sm font-bold uppercase tracking-[0.2em] group/link border border-pine/20 dark:border-ivory/20 px-8 py-4 rounded-full hover:bg-pine hover:text-ivory dark:hover:bg-ivory dark:hover:text-pine transition-all duration-300"
+                    >
+                      <span>Detaylı Bilgi</span>
+                      <span className="material-symbols-outlined text-base group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                    </Link>
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+
+              </div>
+            );
+          })}
         </div>
 
       </div>
