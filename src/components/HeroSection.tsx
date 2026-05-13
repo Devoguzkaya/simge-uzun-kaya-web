@@ -7,7 +7,7 @@ import { siteConfig } from '@/config/site';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-ivory dark:bg-background-dark pt-32 pb-16 lg:pt-40 lg:pb-32">
+    <section className="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-transparent pt-32 pb-12 lg:pt-40 lg:pb-16 border-b border-pine/5 dark:border-ivory/5">
       {/* Background Decorative Blob */}
       <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
         <motion.div
@@ -20,10 +20,10 @@ const HeroSection = () => {
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 w-full relative z-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
 
           {/* Left Text Side */}
-          <div className="flex flex-col items-start w-full relative z-20">
+          <div className="flex flex-col items-start w-full relative z-20 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-serif text-pine dark:text-ivory leading-[1.1] mb-8"
+              className="text-4xl md:text-5xl lg:text-6xl font-serif text-pine dark:text-ivory leading-[1.1] mb-6"
             >
               Ebeveynleri Güçlendiriyor,<br />
               <span className="italic font-light text-accent-terracotta">Aileleri Birleştiriyoruz.</span>
@@ -48,7 +48,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-xl lg:text-2xl text-pine/70 dark:text-ivory/70 font-light leading-relaxed max-w-lg mb-10"
+              className="text-lg lg:text-xl text-pine/70 dark:text-ivory/70 font-light leading-relaxed max-w-md mb-8"
             >
               Sinop'un kalbinde, güvenle büyüme yolculuğunuza eşlik eden profesyonel bir dokunuş. Çocuk yetiştirme sürecinde yalnız değilsiniz.
             </motion.p>
@@ -77,13 +77,21 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="flex flex-col sm:flex-row items-center gap-6"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full max-w-lg"
             >
-              <a href={siteConfig.links.esperaRandevu} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto text-center group relative overflow-hidden bg-pine dark:bg-ivory text-ivory dark:text-pine px-10 py-4 rounded-full text-base font-bold transition-transform hover:scale-[1.02] active:scale-[0.98]">
+              <a 
+                href={siteConfig.links.esperaRandevu} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex-1 text-center group relative overflow-hidden bg-pine dark:bg-ivory text-ivory dark:text-pine px-8 py-4 rounded-full text-base font-bold transition-transform hover:scale-[1.02] active:scale-[0.98]"
+              >
                 <span className="relative z-10">Randevu Oluştur</span>
                 <div className="absolute inset-0 bg-accent-terracotta translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
-              <a href="#services" className="w-full sm:w-auto text-center px-10 py-4 rounded-full text-base font-bold border border-pine/20 dark:border-ivory/20 text-pine dark:text-ivory hover:bg-pine/5 dark:hover:bg-ivory/5 transition-all outline-none">
+              <a 
+                href="#services" 
+                className="flex-1 text-center px-8 py-4 rounded-full text-base font-bold border border-pine/20 dark:border-ivory/20 text-pine dark:text-ivory hover:bg-pine/5 dark:hover:bg-ivory/5 transition-all outline-none"
+              >
                 Hizmetleri İncele
               </a>
             </motion.div>
@@ -94,7 +102,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
-            className="relative w-full aspect-[4/5] lg:aspect-[3/4] rounded-[48px] overflow-hidden shadow-2xl z-10 border border-pine/5 dark:border-ivory/5"
+            className="relative w-full aspect-square lg:max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl z-10 border border-pine/5 dark:border-ivory/5 lg:col-span-5"
           >
             <Image
               alt="Ebeveyn ve çocuk rehberliği"
@@ -120,7 +128,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className="mt-24 pt-10 border-t border-pine/10 dark:border-ivory/10 flex flex-wrap justify-between lg:justify-start gap-12 lg:gap-24 w-full"
+          className="mt-16 pt-10 border-t border-pine/10 dark:border-ivory/10 flex flex-wrap justify-between lg:justify-start gap-12 lg:gap-24 w-full"
         >
           {[
             { label: "Güven", value: "1000+", sub: "Aile Tarafından" },
@@ -128,7 +136,7 @@ const HeroSection = () => {
             { label: "Memnuniyet", value: "%98", sub: "Pozitif Geri Bildirim" }
           ].map((stat, i) => (
             <div key={i} className="flex flex-col items-start lg:items-center text-left lg:text-center">
-              <span className="text-4xl lg:text-5xl font-serif text-pine dark:text-ivory mb-2">{stat.value}</span>
+              <span className="text-3xl lg:text-4xl font-serif text-pine dark:text-ivory mb-2">{stat.value}</span>
               <span className="text-[10px] lg:text-xs uppercase tracking-[0.2em] text-accent-terracotta font-bold">{stat.sub} {stat.label}</span>
             </div>
           ))}

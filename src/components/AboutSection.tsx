@@ -3,15 +3,15 @@ import Image from 'next/image';
 
 const AboutSection = () => {
   return (
-    <section className="py-40 bg-ivory dark:bg-background-dark relative overflow-hidden" id="about">
+    <section className="py-12 lg:py-16 bg-transparent relative overflow-hidden border-b border-pine/5 dark:border-ivory/5" id="about">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col items-center">
 
         {/* Header */}
-        <div className="text-center mb-24 w-full max-w-5xl">
-          <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-8 block">
+        <div className="text-center mb-12 w-full max-w-5xl">
+          <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
             Hakkımda
           </span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-pine dark:text-ivory leading-[1.1] mx-auto tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-pine dark:text-ivory leading-[1.1] mx-auto tracking-tight">
             Çocukların dilini anlamak, <br className="hidden md:block" />
             <span className="italic font-light text-accent-terracotta">onların dünyasında</span> var olmaktır.
           </h2>
@@ -21,7 +21,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start w-full max-w-6xl">
 
           {/* Subtle Image Column */}
-          <div className="lg:col-span-5 relative w-full aspect-[4/5] rounded-[48px] overflow-hidden group">
+          <div className="lg:col-span-4 relative w-full aspect-square rounded-3xl overflow-hidden group">
             <Image
               className="object-cover filter grayscale hover:grayscale-0 transition-all duration-[1500ms]"
               alt="Simge Uzun Kaya"
@@ -34,10 +34,10 @@ const AboutSection = () => {
           </div>
 
           {/* Editorial Content Column */}
-          <div className="lg:col-span-7 flex flex-col gap-10">
-            <div className="text-pine/80 dark:text-ivory/80 text-xl lg:text-2xl font-light leading-relaxed">
-              <p className="mb-8">
-                <span className="text-6xl lg:text-8xl font-serif text-accent-terracotta float-left mr-6 mt-2 leading-[0.6]">S</span>
+          <div className="lg:col-span-8 flex flex-col gap-8">
+            <div className="text-pine/80 dark:text-ivory/80 text-lg font-light leading-relaxed">
+              <p className="mb-6">
+                <span className="text-5xl lg:text-6xl font-serif text-accent-terracotta float-left mr-5 mt-1 leading-[0.6]">S</span>
                 inop&apos;ta 10 yılı aşkın süredir çocukların karmaşık duygusal dünyalarında yol almalarına yardımcı olan, kendini işine adamış bir psikolojik danışmanım. Yaklaşımım, çocukların kendilerini güvende hissetmelerini sağlayan sıcak, empatik bir bağ ile klinik uzmanlığı dengeler.
               </p>
               <p>
@@ -46,13 +46,13 @@ const AboutSection = () => {
             </div>
 
             {/* Micro-Stats / Credentials Line */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10 pt-10 border-t border-pine/10 dark:border-ivory/10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-6 pt-10 border-t border-pine/10 dark:border-ivory/10">
               <div className="flex flex-col gap-3">
-                <span className="text-3xl lg:text-4xl font-serif text-pine dark:text-ivory">Psikoloji Doktora</span>
+                <span className="text-2xl lg:text-3xl font-serif text-pine dark:text-ivory">Psikoloji Doktora</span>
                 <span className="text-[10px] uppercase tracking-widest text-accent-terracotta font-bold">Akademik Temel</span>
               </div>
               <div className="flex flex-col gap-3">
-                <span className="text-3xl lg:text-4xl font-serif text-pine dark:text-ivory">Empati Odaklı</span>
+                <span className="text-2xl lg:text-3xl font-serif text-pine dark:text-ivory">Empati Odaklı</span>
                 <span className="text-[10px] uppercase tracking-widest text-accent-terracotta font-bold">Terapi Yaklaşımı</span>
               </div>
             </div>

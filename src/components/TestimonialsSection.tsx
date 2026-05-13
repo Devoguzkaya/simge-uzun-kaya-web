@@ -23,9 +23,9 @@ const testimonials = [
 
 const TestimonialsSection = () => {
     return (
-        <section className="py-32 bg-ivory dark:bg-background-dark overflow-hidden" id="testimonials">
+        <section className="py-12 lg:py-16 bg-transparent overflow-hidden border-b border-pine/5 dark:border-ivory/5" id="testimonials">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-                <div className="flex flex-col lg:flex-row items-end justify-between mb-24 gap-12 border-b border-pine/10 dark:border-ivory/10 pb-16">
+                <div className="flex flex-col lg:flex-row items-end justify-between mb-12 gap-12 border-b border-pine/10 dark:border-ivory/10 pb-12">
                     <div className="max-w-3xl">
                         <motion.span
                             initial={{ opacity: 0, x: -20 }}
@@ -34,13 +34,13 @@ const TestimonialsSection = () => {
                         >
                             Yolculuklardan Kesitler
                         </motion.span>
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-pine dark:text-ivory leading-[1.1]">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-pine dark:text-ivory leading-[1.1]">
                             Ailelerimizin <br />
                             <span className="italic font-light text-accent-terracotta">Deneyimleri.</span>
                         </h2>
                     </div>
                     <div className="lg:pb-4 max-w-sm">
-                        <p className="text-xl text-pine/70 dark:text-ivory/70 font-light leading-relaxed">
+                        <p className="text-lg text-pine/70 dark:text-ivory/70 font-light leading-relaxed">
                             Güvenle paylaşılan her hikaye, bir başka çocuğun yoluna ışık tutar.
                         </p>
                     </div>
@@ -54,14 +54,14 @@ const TestimonialsSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="p-10 lg:p-14 flex flex-col justify-between min-h-[450px] bg-white dark:bg-pine/20 rounded-[40px] border border-pine/5 dark:border-ivory/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 group relative"
+                            className="p-8 lg:p-10 flex flex-col justify-between min-h-[380px] bg-white dark:bg-pine/20 rounded-3xl border border-pine/5 dark:border-ivory/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 group relative"
                         >
-                            <span className="absolute -top-6 -left-2 text-[150px] font-serif text-accent-terracotta/10 opacity-50 select-none leading-none">"</span>
+                            <span className="absolute -top-6 -left-2 text-[100px] font-serif text-accent-terracotta/10 opacity-50 select-none leading-none">"</span>
                             <div className="mb-12 relative z-10">
-                                <span className="inline-block px-5 py-2 rounded-full border border-accent-terracotta/30 text-accent-terracotta text-[10px] font-bold uppercase tracking-[0.2em] mb-10">
+                                <span className="inline-block px-5 py-2 rounded-full border border-accent-terracotta/30 text-accent-terracotta text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
                                     {item.tag}
                                 </span>
-                                <p className="text-2xl font-serif font-light leading-relaxed text-pine dark:text-ivory">
+                                <p className="text-xl font-serif font-light leading-relaxed text-pine dark:text-ivory">
                                     {item.text}
                                 </p>
                             </div>

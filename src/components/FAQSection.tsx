@@ -26,20 +26,20 @@ const FAQSection = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-32 bg-ivory dark:bg-background-dark" id="faq">
+        <section className="py-12 lg:py-16 bg-transparent border-b border-pine/5 dark:border-ivory/5" id="faq">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-32">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
 
                     {/* Left Side: Title */}
                     <div className="w-full lg:w-[40%]">
                         <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
                             Rehberlik
                         </span>
-                        <h2 className="text-5xl lg:text-7xl font-serif text-pine dark:text-ivory leading-[1.1] mb-8">
+                        <h2 className="text-4xl lg:text-6xl font-serif text-pine dark:text-ivory leading-[1.1] mb-6">
                             Sıkça <br />
                             <span className="italic font-light text-accent-terracotta">Sorulanlar.</span>
                         </h2>
-                        <p className="text-xl text-pine/70 dark:text-ivory/70 font-light leading-relaxed">
+                        <p className="text-lg text-pine/70 dark:text-ivory/70 font-light leading-relaxed">
                             Sürecimiz hakkında merak ettiğiniz detaylar ve bilinmesi gerekenler.
                         </p>
                     </div>
@@ -51,10 +51,10 @@ const FAQSection = () => {
                                 <div key={index} className="border-b border-pine/10 dark:border-ivory/10 group">
                                     <button
                                         onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                                        className="w-full py-10 text-left flex items-start justify-between outline-none"
+                                        className="w-full py-8 text-left flex items-start justify-between outline-none"
                                         aria-expanded={activeIndex === index}
                                     >
-                                        <span className={`text-2xl md:text-3xl font-serif transition-colors duration-500 leading-snug pr-8 ${activeIndex === index ? 'text-accent-terracotta' : 'text-pine dark:text-ivory group-hover:text-accent-terracotta/80'}`}>
+                                        <span className={`text-xl md:text-2xl font-serif transition-colors duration-500 leading-snug pr-8 ${activeIndex === index ? 'text-accent-terracotta' : 'text-pine dark:text-ivory group-hover:text-accent-terracotta/80'}`}>
                                             {faq.question}
                                         </span>
                                         <div className={`mt-1 flex-shrink-0 w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-500 ${activeIndex === index ? 'border-accent-terracotta bg-accent-terracotta text-pine' : 'border-pine/20 dark:border-ivory/20 text-pine dark:text-ivory group-hover:border-accent-terracotta group-hover:text-accent-terracotta'}`}>
@@ -72,7 +72,7 @@ const FAQSection = () => {
                                                 transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
                                                 className="overflow-hidden"
                                             >
-                                                <div className="pb-10 pr-12 text-pine/70 dark:text-ivory/70 text-lg lg:text-xl font-light leading-relaxed">
+                                                <div className="pb-8 pr-12 text-pine/70 dark:text-ivory/70 text-base lg:text-lg font-light leading-relaxed">
                                                     {faq.answer}
                                                 </div>
                                             </motion.div>

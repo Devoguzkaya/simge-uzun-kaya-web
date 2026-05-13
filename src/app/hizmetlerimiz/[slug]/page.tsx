@@ -61,15 +61,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                     {service.shortDesc}
                                 </p>
 
-                                <a
-                                    href={siteConfig.links.esperaRandevu}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group relative overflow-hidden bg-pine dark:bg-ivory text-ivory dark:text-pine px-10 py-5 rounded-full text-lg font-bold transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                                >
-                                    <span className="relative z-10">Randevu Oluştur</span>
-                                    <div className="absolute inset-0 bg-accent-terracotta translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                                </a>
+                                <div className="flex flex-col gap-3 w-full sm:w-max">
+                                    <a
+                                        href={siteConfig.links.esperaRandevu}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group relative overflow-hidden bg-pine dark:bg-ivory text-ivory dark:text-pine px-10 py-5 rounded-full text-lg font-bold transition-transform hover:scale-[1.02] active:scale-[0.98] text-center"
+                                    >
+                                        <span className="relative z-10">Randevu Oluştur</span>
+                                        <div className="absolute inset-0 bg-accent-terracotta translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                                    </a>
+                                    <p className="text-[10px] text-pine/50 dark:text-ivory/50 text-center px-2">
+                                        Randevu alarak <Link href="/kvkk" className="underline hover:text-pine dark:hover:text-ivory">KVKK</Link> ve <Link href="/privacy" className="underline hover:text-pine dark:hover:text-ivory">Gizlilik Politikasını</Link> kabul etmiş sayılırsınız.
+                                    </p>
+                                </div>
                             </div>
 
                             {/* Visual/Video Side */}
@@ -153,10 +158,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 href={siteConfig.links.esperaRandevu}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="relative z-10 px-10 py-4 bg-ivory dark:bg-pine text-pine dark:text-ivory rounded-full text-lg font-bold hover:scale-105 transition-transform"
+                                className="relative z-10 px-10 py-4 bg-ivory dark:bg-pine text-pine dark:text-ivory rounded-full text-lg font-bold hover:scale-105 transition-transform mb-4"
                             >
                                 Hemen Randevu Alın
                             </a>
+                            <p className="relative z-10 text-xs text-ivory/60 dark:text-pine/60 text-center">
+                                Randevu alarak <Link href="/kvkk" className="underline hover:text-ivory dark:hover:text-pine">KVKK Aydınlatma Metni</Link> ve <Link href="/privacy" className="underline hover:text-ivory dark:hover:text-pine">Gizlilik Politikasını</Link> kabul etmiş sayılırsınız.
+                            </p>
                         </div>
 
                         {/* Other Services */}

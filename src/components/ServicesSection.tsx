@@ -11,33 +11,33 @@ const ServicesSection = () => {
 
   // Split services array using standard component structure and alternating layouts
   return (
-    <section className="py-32 bg-ivory dark:bg-background-dark text-pine dark:text-ivory relative overflow-hidden" id="services">
+    <section className="py-12 lg:py-16 bg-transparent text-pine dark:text-ivory relative overflow-hidden border-b border-pine/5 dark:border-ivory/5" id="services">
       {/* Editorial Decorative Blob */}
       <div className="absolute top-[20%] right-[-10%] w-[800px] h-[800px] bg-accent-terracotta/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
 
         {/* Section Header */}
-        <div className="mb-24 md:mb-32 text-center md:text-left">
+        <div className="mb-12 md:mb-16 text-center md:text-left">
           <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
             Klinik Hizmetlerimiz
           </span>
-          <h2 className="text-5xl lg:text-7xl font-serif text-pine dark:text-ivory leading-[1.1] max-w-4xl">
+          <h2 className="text-4xl lg:text-6xl font-serif text-pine dark:text-ivory leading-[1.1] max-w-4xl">
             Sizin İçin En Doğru <br className="hidden md:block" />
             <span className="italic font-light text-accent-terracotta">Yol Haritası.</span>
           </h2>
         </div>
 
         {/* Dynamic Zigzag Services Render */}
-        <div className="flex flex-col gap-32 lg:gap-40">
+        <div className="flex flex-col gap-20 lg:gap-24">
           {servicesData.map((service, index) => {
             const isEven = index % 2 === 0;
 
             return (
-              <div key={service.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center group`}>
+              <div key={service.id} className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center group`}>
 
                 {/* Visual Side */}
-                <div className={`relative w-full aspect-[4/3] lg:aspect-[3/3.5] rounded-[48px] overflow-hidden ${isEven ? 'lg:order-1' : 'lg:order-2'} bg-pine/5 dark:bg-ivory/5`}>
+                <div className={`relative w-full aspect-square rounded-3xl overflow-hidden ${isEven ? 'lg:order-1 lg:col-span-5' : 'lg:order-2 lg:col-span-5'} bg-pine/5 dark:bg-ivory/5`}>
 
                   {/* Play Button Overlay (Visible if video not playing) */}
                   <div className={`absolute inset-0 z-30 flex items-center justify-center transition-opacity duration-500 ${playingVideoId === service.id ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
@@ -78,18 +78,18 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Content Side */}
-                <div className={`flex flex-col items-start ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                <div className={`flex flex-col items-start ${isEven ? 'lg:order-2 lg:col-span-7' : 'lg:order-1 lg:col-span-7'}`}>
                   {/* Decorative Number */}
-                  <span className="text-8xl lg:text-[140px] font-serif text-pine/5 dark:text-ivory/5 leading-none select-none mb-[-40px] lg:mb-[-60px] pointer-events-none font-bold">
+                  <span className="text-6xl lg:text-[100px] font-serif text-pine/5 dark:text-ivory/5 leading-none select-none mb-[-20px] lg:mb-[-30px] pointer-events-none font-bold">
                     {service.id}
                   </span>
 
                   <div className="relative z-10 w-full lg:max-w-lg">
-                    <h3 className="text-3xl lg:text-5xl font-serif leading-[1.15] mb-6">
+                    <h3 className="text-2xl lg:text-4xl font-serif leading-[1.15] mb-6">
                       {service.title}
                     </h3>
 
-                    <p className="text-pine/70 dark:text-ivory/70 text-lg lg:text-xl font-light leading-relaxed mb-10">
+                    <p className="text-pine/70 dark:text-ivory/70 text-base lg:text-lg font-light leading-relaxed mb-8">
                       {service.shortDesc}
                     </p>
 

@@ -102,7 +102,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakartaSans.variable} ${playfairDisplay.variable} font-sans antialiased bg-background-light dark:bg-background-dark text-text-main overflow-x-hidden`}
+        className={`${plusJakartaSans.variable} ${playfairDisplay.variable} font-sans antialiased text-text-main overflow-x-hidden`}
         aria-label="Root layout"
         suppressHydrationWarning
       >

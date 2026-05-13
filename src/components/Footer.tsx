@@ -10,19 +10,19 @@ const Footer = () => {
     const mapUrl = "https://maps.google.com/maps?q=ESPERA+BÜTÜNCÜL+YAŞAM+MERKEZİ+Sinop&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
     return (
-        <footer className="bg-pine dark:bg-background-dark pt-32 pb-12 relative overflow-hidden" id="contact">
+        <footer className="bg-pine dark:bg-background-dark pt-16 pb-12 relative overflow-hidden" id="contact">
             {/* Background Blob */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-terracotta rounded-full blur-[150px] opacity-10 pointer-events-none" />
 
-            <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+            <div className="max-w-6xl mx-auto px-6 lg:px-12 relative z-10">
 
                 {/* 1. Massive CTA Section */}
-                <div className="flex flex-col lg:flex-row items-end justify-between border-b border-ivory/10 pb-20 mb-20 gap-12">
+                <div className="flex flex-col lg:flex-row items-end justify-between border-b border-ivory/10 pb-12 mb-12 gap-12">
                     <div className="max-w-3xl">
                         <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
                             İletişim
                         </span>
-                        <h2 className="text-6xl lg:text-8xl font-serif text-ivory leading-[0.9]">
+                        <h2 className="text-5xl lg:text-6xl font-serif text-ivory leading-[0.9]">
                             Yolculuğa <br />
                             <span className="italic font-light text-accent-terracotta">başlayın.</span>
                         </h2>
@@ -48,7 +48,7 @@ const Footer = () => {
                 </div>
 
                 {/* 2. Grid Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-12">
 
                     {/* Brand */}
                     <div className="md:col-span-4 flex flex-col gap-6">
@@ -96,7 +96,7 @@ const Footer = () => {
                             src={mapUrl}
                             width="100%"
                             height="100%"
-                            style={{ border: 0, filter: 'grayscale(100%) opacity(0.8)' }}
+                            style={{ border: 0 }}
                             allowFullScreen={true}
                             loading="lazy"
                             title="Location Map"
@@ -110,9 +110,11 @@ const Footer = () => {
                     <p className="text-ivory/40 text-xs font-light tracking-wide">
                         © {new Date().getFullYear()} Simge Uzun Kaya. Tüm hakları saklıdır.
                     </p>
-                    <div className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-accent-terracotta">
+                    <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-accent-terracotta md:items-center">
                         <Link href="/privacy" className="hover:text-ivory transition-colors">Gizlilik Politikası</Link>
-                        <Link href="/terms" className="hover:text-ivory transition-colors">KVKK</Link>
+                        <Link href="/kvkk" className="hover:text-ivory transition-colors">KVKK Aydınlatma</Link>
+                        <Link href="/terms" className="hover:text-ivory transition-colors">Hizmet Şartları</Link>
+                        <Link href="/cookies" className="hover:text-ivory transition-colors">Çerez Politikası</Link>
                     </div>
                 </div>
 

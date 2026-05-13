@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <main>
+      <main className="max-w-6xl mx-auto bg-white/10 backdrop-blur-[2px] relative shadow-[0_0_50px_rgba(0,0,0,0.02)] border-x border-pine/5">
         <HeroSection />
 
         <ScrollReveal>
