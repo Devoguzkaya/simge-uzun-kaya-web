@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className="flex items-center gap-6">
           <div className="relative group/randevu hidden sm:block">
             <Link
-              className="inline-flex px-8 py-3 rounded-full bg-pine dark:bg-ivory text-ivory dark:text-pine text-sm font-bold tracking-wide transition-all hover:scale-[1.02] hover:shadow-xl active:scale-95"
+              className="inline-flex px-8 py-3 rounded-full bg-accent-spark text-ivory text-sm font-bold tracking-wide transition-all hover:scale-[1.02] hover:shadow-xl active:scale-95"
               href={siteConfig.links.esperaRandevu}
               target="_blank"
             >

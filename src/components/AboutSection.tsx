@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
@@ -41,7 +44,7 @@ const AboutSection = () => {
             </p>
 
             {/* Micro-Stats / Credentials Line */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-6 pt-10 border-t border-pine/10 dark:border-ivory/10 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-6 pt-10 border-t border-pine/10 dark:border-ivory/10 w-full relative">
               <div className="flex flex-col gap-3 items-center lg:items-start text-center lg:text-left">
                 <span className="text-2xl lg:text-3xl font-serif text-pine dark:text-ivory">Psikoloji Doktora</span>
                 <span className="text-[10px] uppercase tracking-widest text-accent-terracotta font-bold">Akademik Temel</span>

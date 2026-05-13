@@ -11,8 +11,8 @@ export const servicesData = [
             "Yetişkinlikte stres, tükenmişlik ve ilişki sorunlarına çözüm.",
             "Aile içi iletişimi güçlendiren ebeveyn danışmanlığı eklentileri."
         ],
-        img: "/images/services/1.png",
-        videoId: "dQw4w9WgXcQ", // Değiştirilecek
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAQv29dIQQ5uZNiMGgeMiKXGNO2gB7jYm4skHPJiXcx-bcAo-5dBqw5IwtKtMMVxvyIZjucCtEslBAfXWKL7PfF_AAVH6yukj7Z3r72-D7OtnDb9OCl8HICic_9_PqruOiXkxfaKs8ZOsebJm1KCpF5_QCLLTIyG6vlPGkf3fkA9z1J6xwN24NsxVTfCwSrQBKgxHl8LgpPtySb3m3gq0UnWujbZ8udQB2uzht7Ng0cKsQWXAjAh--ysF4kLB1qz7nAN5GWyQ3ILiZ2",
+        videoId: "zH3_U-F7n9U",
         icon: "psychology"
     },
     {
@@ -27,8 +27,8 @@ export const servicesData = [
             "Özgüven gelişimi ve kendini ifade etme becerisinde artış.",
             "Boşanma, kayıp ve taşınma gibi travmatik süreçlerin atlatılması."
         ],
-        img: "/images/services/oyunterapisi.png",
-        videoId: "dQw4w9WgXcQ",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDK8Hf5ZIoBBNObsfSqTLwp2e7we7iojw3xmHcyK9NS9nPZ-Nq2OJvV36rgjaGgP063IMwMPf_zRr8tpJ-gmHNlJwD8qokgtKJ5IumU6_CcENPDx7r6BpO_OpnNxdqt0GAPpyr0ykbwgZP2A6GmIoeG0OF7bxZjLKRpVjbeC6QxWnXFus6XQvQINA0jLqGTPOwXGHU62xdqf-uZrvzcM6vvAytqEU029q1UgB4MAYZia-wjqSd5NaAADasRQdIehsjCbR_rQGCJX55h",
+        videoId: "m2vM789_vYk",
         icon: "toys"
     },
     {

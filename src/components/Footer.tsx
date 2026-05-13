@@ -33,14 +33,13 @@ const Footer = () => {
                             href={siteConfig.links.esperaRandevu}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative overflow-hidden bg-accent-terracotta text-pine px-10 py-5 rounded-full text-lg font-bold transition-transform hover:scale-[1.02] text-center"
+                            className="bg-accent-spark text-ivory px-10 py-5 rounded-full text-lg font-bold transition-all hover:scale-[1.02] hover:shadow-xl active:scale-95 text-center"
                         >
-                            <span className="relative z-10">Randevu Oluştur</span>
-                            <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                            Randevu Oluştur
                         </a>
                         <a
                             href={`tel:${siteConfig.contact.phone1_clean}`}
-                            className="px-10 py-5 rounded-full text-lg font-bold border border-ivory/30 text-ivory hover:bg-ivory/10 transition-colors text-center"
+                            className="px-10 py-5 rounded-full text-lg font-bold border border-ivory/30 text-ivory hover:bg-ivory/10 transition-colors active:scale-95 text-center"
                         >
                             Bizi Arayın
                         </a>

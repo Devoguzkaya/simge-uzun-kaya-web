@@ -8,18 +8,37 @@ import { siteConfig } from '@/config/site';
 const HeroSection = () => {
   return (
     <section className="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-transparent pt-32 pb-12 lg:pt-40 lg:pb-16 border-b border-pine/5 dark:border-ivory/5">
-      {/* Background Decorative Blob */}
+      {/* Background Decorative Blobs */}
       <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.5, scale: 1 }}
-          transition={{ duration: 2, ease: "easeOut" }}
-          className="absolute -top-[10%] -right-[10%] w-[50%] h-[60%] bg-accent-terracotta/10 rounded-full blur-[150px]"
+          animate={{
+            x: [0, 40, 0],
+            y: [0, 30, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute -top-[10%] -right-[10%] w-[50%] h-[60%] bg-accent-spark/20 rounded-full blur-[150px]"
+        />
+        <motion.div
+          animate={{
+            x: [0, -30, 0],
+            y: [0, 40, 0],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute -bottom-[10%] -left-[10%] w-[40%] h-[50%] bg-pine/5 rounded-full blur-[150px]"
         />
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 w-full relative z-10">
-
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
 
           {/* Left Text Side */}
@@ -79,18 +98,17 @@ const HeroSection = () => {
               transition={{ duration: 1, delay: 0.8 }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full sm:w-auto"
             >
-              <a 
-                href={siteConfig.links.esperaRandevu} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex-1 w-full sm:w-auto text-center group relative overflow-hidden bg-pine dark:bg-ivory text-ivory dark:text-pine px-8 py-4 rounded-full text-base font-bold transition-transform hover:scale-[1.02] active:scale-[0.98]"
+              <a
+                href={siteConfig.links.esperaRandevu}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:min-w-[220px] text-center bg-accent-spark text-ivory px-8 py-4 rounded-full text-base font-bold transition-all hover:scale-[1.02] hover:shadow-xl active:scale-95"
               >
-                <span className="relative z-10">Randevu Oluştur</span>
-                <div className="absolute inset-0 bg-accent-terracotta translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                Randevu Oluştur
               </a>
-              <a 
-                href="#services" 
-                className="flex-1 w-full sm:w-auto text-center px-8 py-4 rounded-full text-base font-bold border border-pine/20 dark:border-ivory/20 text-pine dark:text-ivory hover:bg-pine/5 dark:hover:bg-ivory/5 transition-all outline-none"
+              <a
+                href="#services"
+                className="w-full sm:min-w-[220px] text-center px-8 py-4 rounded-full text-base font-bold border border-pine/20 dark:border-ivory/20 text-pine dark:text-ivory hover:bg-pine/5 dark:hover:bg-ivory/5 transition-all hover:scale-[1.02] active:scale-95 outline-none"
               >
                 Hizmetleri İncele
               </a>
@@ -98,32 +116,33 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image Side */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
-            className="relative w-full aspect-square lg:max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl z-10 border border-pine/5 dark:border-ivory/5 lg:col-span-5"
-          >
-            <Image
-              alt="Ebeveyn ve çocuk rehberliği"
-              className="object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK8Hf5ZIoBBNObsfSqTLwp2e7we7iojw3xmHcyK9NS9nPZ-Nq2OJvV36rgjaGgP063IMwMPf_zRr8tpJ-gmHNlJwD8qokgtKJ5IumU6_CcENPDx7r6BpO_OpnNxdqt0GAPpyr0ykbwgZP2A6GmIoeG0OF7bxZjLKRpVjbeC6QxWnXFus6XQvQINA0jLqGTPOwXGHU62xdqf-uZrvzcM6vvAytqEU029q1UgB4MAYZia-wjqSd5NaAADasRQdIehsjCbR_rQGCJX55h"
-              fill
-              priority={true}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            {/* Elegant Overlay */}
-            <div className="absolute inset-0 bg-pine mix-blend-multiply opacity-10 pointer-events-none" />
+          <div className="lg:col-span-5 relative group">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
+              className="relative w-full aspect-square lg:max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl z-10 border border-pine/5 dark:border-ivory/5"
+            >
+              <Image
+                alt="Ebeveyn ve çocuk rehberliği"
+                className="object-cover filter grayscale hover:grayscale-0 transition-all duration-[1500ms]"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK8Hf5ZIoBBNObsfSqTLwp2e7we7iojw3xmHcyK9NS9nPZ-Nq2OJvV36rgjaGgP063IMwMPf_zRr8tpJ-gmHNlJwD8qokgtKJ5IumU6_CcENPDx7r6BpO_OpnNxdqt0GAPpyr0ykbwgZP2A6GmIoeG0OF7bxZjLKRpVjbeC6QxWnXFus6XQvQINA0jLqGTPOwXGHU62xdqf-uZrvzcM6vvAytqEU029q1UgB4MAYZia-wjqSd5NaAADasRQdIehsjCbR_rQGCJX55h"
+                fill
+                priority={true}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-pine mix-blend-multiply opacity-10 pointer-events-none" />
+            </motion.div>
 
-            <div className="absolute bottom-8 left-8 right-8 bg-ivory/90 backdrop-blur-md p-6 rounded-[32px] border border-ivory/20 shadow-xl">
+            {/* Quote Overlay */}
+            <div className="absolute bottom-8 left-8 right-8 bg-ivory/90 backdrop-blur-md p-6 rounded-[32px] border border-ivory/20 shadow-xl z-20">
               <p className="font-serif text-2xl text-pine mb-1">"Çocuğunuzun en iyi terapisti sizsiniz."</p>
               <p className="text-xs uppercase tracking-widest font-bold text-accent-terracotta">Simge Uzun Kaya</p>
             </div>
-          </motion.div>
-
+          </div>
         </div>
 
-        {/* Bottom Metrics attached to Hero */}
+        {/* Bottom Metrics */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -140,7 +159,6 @@ const HeroSection = () => {
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

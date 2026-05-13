@@ -14,7 +14,8 @@
   --color-text-light: #FAFAF7;
 
   --color-accent-terracotta: #849395;
-  --color-accent-terracotta-dark: #6E7D7F;
+  --color-accent-terracotta-dark: #5E8C8A;
+  --color-accent-spark: #6BA3A1;
 
   /* Fontlar */
   --font-sans: var(--font-sans), "Plus Jakarta Sans", sans-serif;
