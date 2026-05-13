@@ -34,24 +34,19 @@ const AboutSection = () => {
           </div>
 
           {/* Editorial Content Column */}
-          <div className="lg:col-span-8 flex flex-col gap-8">
-            <div className="text-pine/80 dark:text-ivory/80 text-lg font-light leading-relaxed">
-              <p className="mb-6">
-                <span className="text-5xl lg:text-6xl font-serif text-accent-terracotta float-left mr-5 mt-1 leading-[0.6]">S</span>
-                inop&apos;ta 10 yılı aşkın süredir çocukların karmaşık duygusal dünyalarında yol almalarına yardımcı olan, kendini işine adamış bir psikolojik danışmanım. Yaklaşımım, çocukların kendilerini güvende hissetmelerini sağlayan sıcak, empatik bir bağ ile klinik uzmanlığı dengeler.
-              </p>
-              <p>
-                Her çocuğun oyun, sanat veya sohbet yoluyla kendine özgü bir ifade dili olduğuna inanıyorum. Amacım, bu dili çözmek ve hem çocuğu hem de ailesini güçlendirmektir. Anlaşıldığını hisseden çocuk, potansiyelini keşfetmeye en yakın çocuktur.
-              </p>
-            </div>
+          <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <p className="text-lg lg:text-xl text-pine/80 dark:text-ivory/80 leading-relaxed font-light mb-8">
+              <span className="text-6xl lg:text-7xl font-serif text-accent-terracotta float-none lg:float-left mr-0 lg:mr-6 mt-2 mb-4 lg:mb-2 leading-none">S</span>
+              imge Uzun Kaya olarak, Sinop'ta çocuk, ergen ve yetişkin danışanlarımıza profesyonel psikolojik destek sunuyoruz. İnsanın kendi iç dünyasına yaptığı yolculuğun, en kıymetli yolculuk olduğuna inanıyoruz.
+            </p>
 
             {/* Micro-Stats / Credentials Line */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-6 pt-10 border-t border-pine/10 dark:border-ivory/10">
-              <div className="flex flex-col gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-6 pt-10 border-t border-pine/10 dark:border-ivory/10 w-full">
+              <div className="flex flex-col gap-3 items-center lg:items-start text-center lg:text-left">
                 <span className="text-2xl lg:text-3xl font-serif text-pine dark:text-ivory">Psikoloji Doktora</span>
                 <span className="text-[10px] uppercase tracking-widest text-accent-terracotta font-bold">Akademik Temel</span>
               </div>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 items-center lg:items-start text-center lg:text-left">
                 <span className="text-2xl lg:text-3xl font-serif text-pine dark:text-ivory">Empati Odaklı</span>
                 <span className="text-[10px] uppercase tracking-widest text-accent-terracotta font-bold">Terapi Yaklaşımı</span>
               </div>

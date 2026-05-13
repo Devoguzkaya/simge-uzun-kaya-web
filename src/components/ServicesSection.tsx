@@ -18,13 +18,13 @@ const ServicesSection = () => {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
 
         {/* Section Header */}
-        <div className="mb-12 md:mb-16 text-center md:text-left">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left mb-16 lg:mb-24">
           <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
-            Klinik Hizmetlerimiz
+            Hizmet Alanlarımız
           </span>
-          <h2 className="text-4xl lg:text-6xl font-serif text-pine dark:text-ivory leading-[1.1] max-w-4xl">
-            Sizin İçin En Doğru <br className="hidden md:block" />
-            <span className="italic font-light text-accent-terracotta">Yol Haritası.</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-pine dark:text-ivory leading-tight max-w-4xl">
+            Sizin için en uygun <br />
+            <span className="italic font-light text-accent-terracotta">destek modelini</span> seçelim.
           </h2>
         </div>
 
@@ -78,18 +78,18 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Content Side */}
-                <div className={`flex flex-col items-start ${isEven ? 'lg:order-2 lg:col-span-7' : 'lg:order-1 lg:col-span-7'}`}>
+                <div className={`flex flex-col items-center lg:items-start text-center lg:text-left ${isEven ? 'lg:order-2 lg:col-span-7' : 'lg:order-1 lg:col-span-7'}`}>
                   {/* Decorative Number */}
                   <span className="text-6xl lg:text-[100px] font-serif text-pine/5 dark:text-ivory/5 leading-none select-none mb-[-20px] lg:mb-[-30px] pointer-events-none font-bold">
                     {service.id}
                   </span>
 
                   <div className="relative z-10 w-full lg:max-w-lg">
-                    <h3 className="text-2xl lg:text-4xl font-serif leading-[1.15] mb-6">
+                    <h3 className="text-3xl lg:text-5xl font-serif text-pine dark:text-ivory mb-6 lg:mb-8 leading-tight">
                       {service.title}
                     </h3>
 
-                    <p className="text-pine/70 dark:text-ivory/70 text-base lg:text-lg font-light leading-relaxed mb-8">
+                    <p className="text-lg lg:text-xl text-pine/70 dark:text-ivory/70 font-light leading-relaxed mb-8 lg:mb-12">
                       {service.shortDesc}
                     </p>
 

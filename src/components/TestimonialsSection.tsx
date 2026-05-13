@@ -25,8 +25,8 @@ const TestimonialsSection = () => {
     return (
         <section className="py-12 lg:py-16 bg-transparent overflow-hidden border-b border-pine/5 dark:border-ivory/5" id="testimonials">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-                <div className="flex flex-col lg:flex-row items-end justify-between mb-12 gap-12 border-b border-pine/10 dark:border-ivory/10 pb-12">
-                    <div className="max-w-3xl">
+                <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between mb-12 gap-12 border-b border-pine/10 dark:border-ivory/10 pb-12 text-center lg:text-left">
+                    <div className="max-w-3xl flex flex-col items-center lg:items-start">
                         <motion.span
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}

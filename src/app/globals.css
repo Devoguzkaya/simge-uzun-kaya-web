@@ -3,7 +3,7 @@
 @theme {
   --color-ivory: #FAFAF7;
   --color-pine: #293630;
-  --color-terracotta: #D4A373;
+  --color-terracotta: #849395;
   --color-stone-muted: #8E9A93;
 
   --color-background-light: #FAFAF7;
@@ -13,8 +13,8 @@
   --color-text-muted: #8E9A93;
   --color-text-light: #FAFAF7;
 
-  --color-accent-terracotta: #D4A373;
-  --color-accent-terracotta-dark: #B58655;
+  --color-accent-terracotta: #849395;
+  --color-accent-terracotta-dark: #6E7D7F;
 
   /* Fontlar */
   --font-sans: var(--font-sans), "Plus Jakarta Sans", sans-serif;

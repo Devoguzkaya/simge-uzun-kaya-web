@@ -23,12 +23,12 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
 
           {/* Left Text Side */}
-          <div className="flex flex-col items-start w-full relative z-20 lg:col-span-7">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 lg:space-y-8 relative z-20 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="inline-flex items-center gap-3 mb-8 px-5 py-2.5 rounded-full border border-pine/10 dark:border-ivory/10 text-pine/70 dark:text-ivory/70 text-xs font-bold uppercase tracking-[0.2em] bg-white/50 dark:bg-pine/50 backdrop-blur-md"
+              className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-pine/10 dark:border-ivory/10 text-pine/70 dark:text-ivory/70 text-xs font-bold uppercase tracking-[0.2em] bg-white/50 dark:bg-pine/50 backdrop-blur-md"
             >
               <span className="w-2 h-2 rounded-full bg-accent-terracotta animate-pulse"></span>
               Çocuk, Ergen & Yetişkin Danışmanlığı
@@ -38,7 +38,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-serif text-pine dark:text-ivory leading-[1.1] mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-serif text-pine dark:text-ivory leading-[1.1]"
             >
               Ebeveynleri Güçlendiriyor,<br />
               <span className="italic font-light text-accent-terracotta">Aileleri Birleştiriyoruz.</span>
@@ -48,7 +48,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-lg lg:text-xl text-pine/70 dark:text-ivory/70 font-light leading-relaxed max-w-md mb-8"
+              className="text-lg lg:text-xl text-pine/70 dark:text-ivory/70 font-light leading-relaxed max-w-md"
             >
               Sinop'un kalbinde, güvenle büyüme yolculuğunuza eşlik eden profesyonel bir dokunuş. Çocuk yetiştirme sürecinde yalnız değilsiniz.
             </motion.p>
@@ -57,15 +57,15 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="space-y-4 mb-12 w-full max-w-lg"
+              className="space-y-4 w-full max-w-lg"
             >
               {[
                 "Çocuk ve ergenler için sağaltıcı oyun terapisi",
                 "Gelişimsel dönemleri anlama konusunda rehberlik",
                 "Yetişkinler için bireysel ve çift danışmanlığı"
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <span className="flex-shrink-0 mt-1 w-6 h-6 rounded-full border border-accent-terracotta/40 flex items-center justify-center text-accent-terracotta">
+                <li key={i} className="flex items-center justify-center lg:justify-start gap-4">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full border border-accent-terracotta/40 flex items-center justify-center text-accent-terracotta">
                     <span className="material-symbols-outlined text-[12px]">check</span>
                   </span>
                   <span className="text-pine/80 dark:text-ivory/80 text-base lg:text-lg font-light leading-snug">{item}</span>
@@ -77,20 +77,20 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full max-w-lg"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full sm:w-auto"
             >
               <a 
                 href={siteConfig.links.esperaRandevu} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="flex-1 text-center group relative overflow-hidden bg-pine dark:bg-ivory text-ivory dark:text-pine px-8 py-4 rounded-full text-base font-bold transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                className="flex-1 w-full sm:w-auto text-center group relative overflow-hidden bg-pine dark:bg-ivory text-ivory dark:text-pine px-8 py-4 rounded-full text-base font-bold transition-transform hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span className="relative z-10">Randevu Oluştur</span>
                 <div className="absolute inset-0 bg-accent-terracotta translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
               <a 
                 href="#services" 
-                className="flex-1 text-center px-8 py-4 rounded-full text-base font-bold border border-pine/20 dark:border-ivory/20 text-pine dark:text-ivory hover:bg-pine/5 dark:hover:bg-ivory/5 transition-all outline-none"
+                className="flex-1 w-full sm:w-auto text-center px-8 py-4 rounded-full text-base font-bold border border-pine/20 dark:border-ivory/20 text-pine dark:text-ivory hover:bg-pine/5 dark:hover:bg-ivory/5 transition-all outline-none"
               >
                 Hizmetleri İncele
               </a>
@@ -128,18 +128,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className="mt-16 pt-10 border-t border-pine/10 dark:border-ivory/10 flex flex-wrap justify-between lg:justify-start gap-12 lg:gap-24 w-full"
         >
-          {[
-            { label: "Güven", value: "1000+", sub: "Aile Tarafından" },
-            { label: "Deneyim", value: "8+", sub: "Yıl Uzmanlık" },
-            { label: "Memnuniyet", value: "%98", sub: "Pozitif Geri Bildirim" }
-          ].map((stat, i) => (
-            <div key={i} className="flex flex-col items-start lg:items-center text-left lg:text-center">
-              <span className="text-3xl lg:text-4xl font-serif text-pine dark:text-ivory mb-2">{stat.value}</span>
-              <span className="text-[10px] lg:text-xs uppercase tracking-[0.2em] text-accent-terracotta font-bold">{stat.sub} {stat.label}</span>
+          <div className="grid grid-cols-2 gap-4 lg:gap-12 pt-8 lg:pt-12 border-t border-pine/10 dark:border-ivory/10 w-full">
+            <div className="text-center lg:text-left">
+              <span className="block text-3xl lg:text-4xl font-serif text-accent-terracotta mb-1">6+</span>
+              <span className="text-[10px] lg:text-xs uppercase tracking-widest text-pine/60 dark:text-ivory/60">Yıllık Deneyim</span>
             </div>
-          ))}
+            <div className="text-center lg:text-left">
+              <span className="block text-3xl lg:text-4xl font-serif text-accent-terracotta mb-1">1500+</span>
+              <span className="text-[10px] lg:text-xs uppercase tracking-widest text-pine/60 dark:text-ivory/60">Mutlu Danışan</span>
+            </div>
+          </div>
         </motion.div>
 
       </div>

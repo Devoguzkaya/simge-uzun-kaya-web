@@ -28,10 +28,10 @@ const FAQSection = () => {
     return (
         <section className="py-12 lg:py-16 bg-transparent border-b border-pine/5 dark:border-ivory/5" id="faq">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-start">
 
                     {/* Left Side: Title */}
-                    <div className="w-full lg:w-[40%]">
+                    <div className="w-full lg:w-[40%] text-center lg:text-left">
                         <span className="text-accent-terracotta text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
                             Rehberlik
                         </span>
